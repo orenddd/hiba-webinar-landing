@@ -14,8 +14,10 @@
 
     <style>
         :root {
-            --pink: #fa226b;
-            --purple: #9421db;
+            --pink:        #f9226c;
+            --purple:      #9f21cf;
+            --pink-purple: #bb2eb6;
+            --light-pink:  #f1307b;
             --dark: #0a0a14;
             --light: #ffffff;
             --gray-bg: #f6f6f8;
@@ -47,8 +49,8 @@
             50%       { transform: translateY(-18px); }
         }
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(250,34,107,.4); }
-            50%       { box-shadow: 0 0 50px rgba(250,34,107,.8), 0 0 100px rgba(148,33,219,.4); }
+            0%, 100% { box-shadow: 0 0 20px rgba(249,34,108,.4); }
+            50%       { box-shadow: 0 0 50px rgba(249,34,108,.8), 0 0 100px rgba(159,33,207,.4); }
         }
         @keyframes particleDrift {
             0%   { transform: translateY(0) translateX(0) rotate(0deg);   opacity: .8; }
@@ -110,8 +112,8 @@
             color: rgba(255,255,255,.8);
         }
         .label-pink {
-            background: rgba(250,34,107,.12);
-            border: 1px solid rgba(250,34,107,.4);
+            background: rgba(249,34,108,.12);
+            border: 1px solid rgba(249,34,108,.4);
             color: var(--pink);
         }
         .gradient-hr {
@@ -125,8 +127,8 @@
         ═══════════════════════════════ */
         .hero {
             min-height: 100vh;
-            background: radial-gradient(ellipse at 15% 80%, rgba(148,33,219,.35) 0%, transparent 55%),
-                        radial-gradient(ellipse at 85% 20%, rgba(250,34,107,.3) 0%, transparent 55%),
+            background: radial-gradient(ellipse at 15% 80%, rgba(159,33,207,.35) 0%, transparent 55%),
+                        radial-gradient(ellipse at 85% 20%, rgba(249,34,108,.3) 0%, transparent 55%),
                         linear-gradient(160deg, #12002a 0%, #0a0a14 50%, #1e0020 100%);
             position: relative;
             overflow: hidden;
@@ -155,8 +157,8 @@
             filter: blur(80px);
             pointer-events: none;
         }
-        .orb-a { width: 500px; height: 500px; background: rgba(148,33,219,.25); top: -120px; right: -80px; animation: floatY 7s ease-in-out infinite; }
-        .orb-b { width: 350px; height: 350px; background: rgba(250,34,107,.2); bottom: -80px; left: -60px; animation: floatY 9s ease-in-out infinite reverse; }
+        .orb-a { width: 500px; height: 500px; background: rgba(159,33,207,.25); top: -120px; right: -80px; animation: floatY 7s ease-in-out infinite; }
+        .orb-b { width: 350px; height: 350px; background: rgba(249,34,108,.2); bottom: -80px; left: -60px; animation: floatY 9s ease-in-out infinite reverse; }
 
         #particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
         .particle {
@@ -168,8 +170,8 @@
 
         .hero-badge {
             display: inline-block;
-            background: rgba(250,34,107,.15);
-            border: 1px solid rgba(250,34,107,.45);
+            background: rgba(249,34,108,.15);
+            border: 1px solid rgba(249,34,108,.45);
             color: #ff6aa0;
             padding: 10px 28px;
             border-radius: 50px;
@@ -265,7 +267,7 @@
         }
         .btn-cta:hover {
             transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 24px 70px rgba(250,34,107,.55);
+            box-shadow: 0 24px 70px rgba(249,34,108,.55);
         }
         .btn-cta.dark {
             background: #111;
@@ -330,7 +332,7 @@
             margin: 0 auto;
             border-radius: 22px;
             overflow: hidden;
-            box-shadow: 0 0 100px rgba(148,33,219,.5), 0 0 200px rgba(148,33,219,.2);
+            box-shadow: 0 0 100px rgba(159,33,207,.5), 0 0 200px rgba(159,33,207,.2);
             position: relative;
         }
         .video-frame iframe {
@@ -515,7 +517,7 @@
         .dark-sec .col-text strong { color: var(--pink); }
 
         .highlight-box {
-            background: rgba(148,33,219,.12);
+            background: rgba(159,33,207,.12);
             border: 2px solid var(--purple);
             border-radius: 18px;
             padding: 28px 40px;
@@ -577,7 +579,7 @@
             padding: 20px 24px;
             transition: background .3s, transform .3s;
         }
-        .b-item:hover { background: rgba(250,34,107,.1); transform: translateX(-5px); }
+        .b-item:hover { background: rgba(249,34,108,.1); transform: translateX(-5px); }
         .b-arrow { color: var(--pink); font-size: 20px; flex-shrink: 0; margin-top: 2px; }
         .b-text { font-size: 18px; line-height: 1.65; color: rgba(255,255,255,.88); }
 
@@ -606,7 +608,7 @@
         }
         .icon-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 24px 60px rgba(250,34,107,.15);
+            box-shadow: 0 24px 60px rgba(249,34,108,.15);
             border-color: var(--pink);
         }
         .icon-card img { width: 64px; height: 64px; margin-bottom: 18px; }
@@ -640,7 +642,7 @@
             box-shadow: 0 4px 20px rgba(0,0,0,.06);
             transition: transform .3s, box-shadow .3s;
         }
-        .who-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(250,34,107,.1); }
+        .who-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(249,34,108,.1); }
         .who-check {
             width: 34px; height: 34px;
             background: linear-gradient(135deg, var(--purple), var(--pink));
@@ -731,11 +733,11 @@
             position: absolute;
             top: 12px; left: 18px;
             font-size: 80px;
-            color: rgba(148,33,219,.08);
+            color: rgba(159,33,207,.08);
             font-family: Georgia, serif;
             line-height: 1;
         }
-        .testi-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(250,34,107,.12); }
+        .testi-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(249,34,108,.12); }
         .stars { color: var(--purple); font-size: 17px; margin-bottom: 14px; letter-spacing: 2px; }
         .testi-body { font-size: 14px; color: #555; line-height: 1.75; margin-bottom: 22px; }
         .testi-author { display: flex; align-items: center; gap: 12px; }
@@ -766,7 +768,7 @@
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             width: 700px; height: 700px;
-            background: radial-gradient(circle, rgba(148,33,219,.18) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(159,33,207,.18) 0%, transparent 70%);
             pointer-events: none;
         }
         .philo-content {
@@ -808,7 +810,7 @@
             bottom: 0; left: 0; right: 0;
             background: rgba(8,8,18,.94);
             backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(250,34,107,.3);
+            border-top: 1px solid rgba(249,34,108,.3);
             padding: 14px 24px;
             display: flex; align-items: center; justify-content: center; gap: 22px;
             z-index: 999;
@@ -1005,13 +1007,13 @@
                 <p><strong>الاستمرار بالطريقة نفسها؟ لم يعد منطقيًا.</strong></p>
             </div>
             <div class="col-img reveal-r">
-                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/ai-artificial-intelligence-glowing-neon-circuit-board_900x591-r.jpg" alt="" style="border-radius:22px; box-shadow: 0 0 60px rgba(148,33,219,.35);">
+                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/ai-artificial-intelligence-glowing-neon-circuit-board_900x591-r.jpg" alt="" style="border-radius:22px; box-shadow: 0 0 60px rgba(159,33,207,.35);">
             </div>
         </div>
 
         <div class="two-col" style="margin-top: 60px;">
             <div class="col-img reveal-l">
-                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/4562_900x600-r.jpg" alt="" style="border-radius:22px; box-shadow: 0 0 60px rgba(250,34,107,.25);">
+                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/4562_900x600-r.jpg" alt="" style="border-radius:22px; box-shadow: 0 0 60px rgba(249,34,108,.25);">
             </div>
             <div class="col-text reveal-r">
                 <p>الآن، بعدما تغيّر الواقع التجاري، أصبح الوصول إلى العملاء المناسبين أصعب، والضجيج أكبر.</p>
@@ -1102,7 +1104,7 @@
 
         <div class="method-grid">
             <div class="col-img reveal-l">
-                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/1566_900x1103-r.jpg" alt="" style="width:100%; border-radius:22px; box-shadow:0 20px 60px rgba(250,34,107,.15);">
+                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/1566_900x1103-r.jpg" alt="" style="width:100%; border-radius:22px; box-shadow:0 20px 60px rgba(249,34,108,.15);">
             </div>
             <div class="col-text reveal-r" style="color:#333;">
                 <p>معظم أصحاب المصالح يحاولون إصلاح أنفسهم… أو تعلّم شيء جديد في كل مرة… بدلًا من بناء منظومة حقيقية.</p>
@@ -1225,7 +1227,7 @@
                 <p>لهذا أسّست <span class="win-badge">WIN SYSTEM™</span>، لأساعد أصحاب المصالح الذين يشعرون أنهم يستحقون أكثر، على <strong>الانتقال من إدارة يومية مُرهِقة وردود أفعال مستمرة, إلى مصلحة تُدار بوضوح، بمنهجية، وتُنتج أرباحًا حقيقية.</strong></p>
             </div>
             <div class="reveal-r">
-                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/222_900x900-r%20(1).png" alt="هبة حلبي" style="width:100%; border-radius:22px; box-shadow:0 20px 60px rgba(250,34,107,.2);">
+                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/222_900x900-r%20(1).png" alt="هبة حلبي" style="width:100%; border-radius:22px; box-shadow:0 20px 60px rgba(249,34,108,.2);">
             </div>
         </div>
     </div>
@@ -1364,7 +1366,7 @@
     // ─── PARTICLES ───
     (function() {
         const c = document.getElementById('particles');
-        const colors = ['rgba(250,34,107,.65)','rgba(148,33,219,.65)','rgba(255,255,255,.3)'];
+        const colors = ['rgba(249,34,108,.65)','rgba(159,33,207,.65)','rgba(255,255,255,.3)'];
         for (let i = 0; i < 35; i++) {
             const p = document.createElement('div');
             p.className = 'particle';
