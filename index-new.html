@@ -821,6 +821,13 @@
         .sticky-text { font-size: 15px; font-weight: 600; color: white; }
         .sticky-text span { color: var(--pink); }
 
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 52px;
+            align-items: center;
+        }
+
         /* ═══════════════════════════════
            RESPONSIVE
         ═══════════════════════════════ */
@@ -839,14 +846,6 @@
         }
         @media (max-width: 480px) {
             .icons-grid { grid-template-columns: 1fr; }
-        }
-
-        /* about-grid same as two-col */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 52px;
-            align-items: center;
         }
     </style>
 </head>
