@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شكراً لك — THE CHANGE مع هبة حلبي</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '291370482973620');
+fbq('track', 'PageView');
+fbq('track', 'Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=291370482973620&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+
+:root {
+  --purple:      #9421DB;
+  --purple-light:#f3e8ff;
+  --purple-mid:  #e9d5ff;
+  --pink:        #FA226B;
+  --pink-light:  #fce7f3;
+  --black:       #111111;
+  --gray-900:    #1a1a2e;
+  --gray-700:    #374151;
+  --gray-500:    #6B7280;
+  --gray-300:    #D1D5DB;
+  --gray-100:    #F3F4F6;
+  --gray-50:     #F9FAFB;
+  --white:       #FFFFFF;
+
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   24px;
+  --radius-xl:   36px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.10);
+  --shadow-purple: 0 8px 32px rgba(148,33,219,.18);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: 'Rubik', 'Assistant', sans-serif;
+  background: var(--white);
+  color: var(--gray-900);
+  direction: rtl;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.grad {
+  background: linear-gradient(120deg, var(--purple) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── NAVBAR ─────────────────────────────────── */
+#nav {
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+}
+.nav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-logo img { height: 40px; }
+
+/* ─── MAIN ───────────────────────────────────── */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  background: linear-gradient(160deg, var(--purple-light) 0%, var(--white) 50%, var(--pink-light) 100%);
+}
+
+/* ─── CARD ───────────────────────────────────── */
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-xl);
+  padding: 64px 56px;
+  box-shadow: var(--shadow-lg);
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+  animation: cardIn .7s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(32px) scale(.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ─── CHECK ICON ─────────────────────────────── */
+.check-wrap {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+  box-shadow: var(--shadow-purple);
+  animation: popIn .6s .3s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(.4); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.check-icon {
+  width: 48px;
+  height: 48px;
+  stroke: white;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.check-path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: drawCheck .5s .8s ease forwards;
+}
+
+@keyframes drawCheck {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ─── BADGE ──────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  background: var(--purple-light);
+  color: var(--purple);
+  margin-bottom: 20px;
+  animation: fadeUp .6s .4s ease both;
+}
+
+.title {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  color: var(--black);
+  animation: fadeUp .6s .5s ease both;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--gray-500);
+  margin-bottom: 40px;
+  animation: fadeUp .6s .6s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:none; }
+}
+
+/* ─── STEPS ──────────────────────────────────── */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+  text-align: right;
+  animation: fadeUp .6s .7s ease both;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.step:hover { border-color: var(--purple-mid); box-shadow: var(--shadow-sm); }
+
+.step-num {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-text strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 2px;
+}
+.step-text span { font-size: 13px; color: var(--gray-500); }
+
+/* ─── DIVIDER ────────────────────────────────── */
+.divider {
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--pink));
+  margin: 0 auto 32px;
+  animation: fadeUp .6s .65s ease both;
+}
+
+/* ─── BUTTON ─────────────────────────────────── */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--purple);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1.5px solid var(--purple-mid);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s, box-shadow .2s;
+  animation: fadeUp .6s .85s ease both;
+}
+.btn-back:hover { background: var(--purple-light); box-shadow: var(--shadow-sm); }
+
+/* ─── FOOTER ─────────────────────────────────── */
+footer {
+  background: var(--gray-900);
+  color: var(--white);
+  padding: 40px 24px;
+  text-align: center;
+}
+footer img  { height: 44px; margin: 0 auto 16px; opacity: .8; }
+footer p    { font-size: 12px; color: rgba(255,255,255,.4); }
+
+/* ─── CONFETTI ───────────────────────────────── */
+.confetti-wrap {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -16px;
+  border-radius: 2px;
+  animation: confettiFall linear forwards;
+}
+@keyframes confettiFall {
+  0%   { transform: translateY(0) rotate(0deg);    opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 600px) {
+  .card { padding: 40px 24px; }
+  .title { font-size: 28px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ══════════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png" alt="هبة الحلبي">
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ CONFETTI ═════════════════════════════════════ -->
+<div class="confetti-wrap" id="confetti"></div>
+
+<!-- ═══ MAIN ═════════════════════════════════════════ -->
+<main>
+  <div class="card">
+
+    <!-- Check icon -->
+    <div class="check-wrap">
+      <svg class="check-icon" viewBox="0 0 48 48">
+        <path class="check-path" d="M10 26 L20 36 L38 14"/>
+      </svg>
+    </div>
+
+    <div class="badge">✦ تم التسجيل بنجاح</div>
+
+    <h1 class="title">شكراً لك! 🎉<br><span class="grad">نراك في THE CHANGE</span></h1>
+
+    <div class="divider"></div>
+
+    <p class="subtitle">
+      وصلنا طلب تسجيلك بنجاح.<br>
+      سيتواصل معك فريقنا في أقرب وقت ممكن لتأكيد مكانك.
+    </p>
+
+    <a href="index.html" class="btn-back">← العودة للصفحة الرئيسية</a>
+
+  </div>
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
+<footer>
+  <img src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png" alt="هبة الحلبي">
+  <p>© 2026 هبة الحلبي — جميع الحقوق محفوظة</p>
+</footer>
+
+<!-- ═══ JS ════════════════════════════════════════════ -->
+<script>
+  // Confetti burst
+  (function() {
+    const colors = ['#9421DB','#FA226B','#e9d5ff','#fce7f3','#F59E0B','#10B981'];
+    const wrap = document.getElementById('confetti');
+    const count = 80;
+
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement('div');
+      el.classList.add('confetti-piece');
+      el.style.left     = Math.random() * 100 + 'vw';
+      el.style.background = colors[Math.floor(Math.random() * colors.length)];
+      el.style.width    = (Math.random() * 8 + 6) + 'px';
+      el.style.height   = (Math.random() * 8 + 6) + 'px';
+      el.style.borderRadius = Math.random() > .5 ? '50%' : '2px';
+      const dur  = (Math.random() * 2 + 2).toFixed(2);
+      const delay = (Math.random() * 1.2).toFixed(2);
+      el.style.animation = `confettiFall ${dur}s ${delay}s linear forwards`;
+      wrap.appendChild(el);
+    }
+
+    // Remove confetti elements after animation
+    setTimeout(() => { wrap.innerHTML = ''; }, 4500);
+  })();
+</script>
+
+</body>
+</html>
