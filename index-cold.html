@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لماذا مصلحتك لا تنمو؟ | ويبينار مجاني مع هبة حلبي</title>
+    <meta property="og:title" content="لماذا مصلحتك لا تنمو؟ | ويبينار مجاني مع هبة حلبي">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://content.vp4.me/info_wewin-consulting_com/Content/designer-working-from-her-home_900x656-r.jpg">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '291370482973620');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=291370482973620&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pink:        #f9226c;
+            --purple:      #9f21cf;
+            --pink-purple: #bb2eb6;
+            --light-pink:  #f1307b;
+            --dark: #0a0a14;
+            --light: #ffffff;
+            --gray-bg: #f6f6f8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            direction: rtl;
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes gradientShift {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-16px); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(249,34,108,.4); }
+            50%       { box-shadow: 0 0 50px rgba(249,34,108,.8), 0 0 90px rgba(159,33,207,.4); }
+        }
+        @keyframes particleDrift {
+            0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: .8; }
+            100% { transform: translateY(-110vh) translateX(50px) rotate(720deg); opacity: 0; }
+        }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal, .reveal-l, .reveal-r {
+            opacity: 0;
+            transition: opacity .7s ease, transform .7s ease;
+        }
+        .reveal   { transform: translateY(28px); }
+        .reveal-l { transform: translateX(-28px); }
+        .reveal-r { transform: translateX(28px); }
+        .revealed { opacity: 1 !important; transform: none !important; }
+        .d1 { transition-delay: .1s; }
+        .d2 { transition-delay: .2s; }
+        .d3 { transition-delay: .3s; }
+        .d4 { transition-delay: .4s; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        .gradient-hr {
+            height: 3px;
+            background: linear-gradient(90deg, var(--purple), var(--pink));
+            border: none;
+        }
+
+        /* ═══════════════════════════════
+           HERO
+        ═══════════════════════════════ */
+        .hero {
+            min-height: 100vh;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(159,33,207,.35) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 15%, rgba(249,34,108,.3) 0%, transparent 55%),
+                linear-gradient(160deg, #12002a 0%, #0a0a14 50%, #1e0020 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 90px 20px 80px;
+            text-align: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .hero-orb {
+            position: absolute; border-radius: 50%;
+            filter: blur(80px); pointer-events: none;
+        }
+        .orb-a { width: 500px; height: 500px; background: rgba(159,33,207,.22); top: -120px; right: -80px; animation: floatY 7s ease-in-out infinite; }
+        .orb-b { width: 350px; height: 350px; background: rgba(249,34,108,.18); bottom: -80px; left: -60px; animation: floatY 9s ease-in-out infinite reverse; }
+
+        #particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+        .particle {
+            position: absolute; width: 3px; height: 3px;
+            border-radius: 50%; animation: particleDrift linear infinite;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(249,34,108,.15);
+            border: 1px solid rgba(249,34,108,.45);
+            color: #ff6aa0;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            animation: fadeUp .8s ease .1s both;
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-title {
+            font-size: clamp(36px, 7vw, 72px);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 22px;
+            color: white;
+            animation: fadeUp .8s ease .2s both;
+            font-family: 'Assistant', sans-serif;
+        }
+        .hero-title .grad {
+            background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s linear infinite;
+        }
+
+        .hero-sub {
+            font-size: clamp(17px, 2.5vw, 24px);
+            color: rgba(255,255,255,.78);
+            max-width: 620px;
+            line-height: 1.7;
+            margin: 0 auto 36px;
+            animation: fadeUp .8s ease .35s both;
+        }
+
+        .hero-date-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.15);
+            backdrop-filter: blur(16px);
+            border-radius: 14px;
+            padding: 12px 26px;
+            margin-bottom: 40px;
+            animation: fadeUp .8s ease .5s both;
+        }
+        .hero-date-pill .cal-icon {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            border-radius: 9px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 17px; flex-shrink: 0;
+        }
+        .hero-date-pill span {
+            font-size: clamp(15px, 2vw, 20px);
+            font-weight: 700; color: white;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 18px 52px;
+            border-radius: 14px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease;
+            animation: pulseGlow 2.5s ease infinite, fadeUp .8s ease .65s both;
+            font-family: 'Rubik', sans-serif;
+        }
+        .btn-cta:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 24px 70px rgba(249,34,108,.55);
+        }
+
+        .hero-free-note {
+            margin-top: 14px;
+            font-size: 14px;
+            color: rgba(255,255,255,.45);
+            animation: fadeUp .8s ease .8s both;
+        }
+
+        /* ═══════════════════════════════
+           PAIN SECTION
+        ═══════════════════════════════ */
+        .pain-sec {
+            background: white;
+            padding: 72px 20px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+        .pain-label {
+            display: inline-block;
+            background: rgba(249,34,108,.1);
+            border: 1px solid rgba(249,34,108,.35);
+            color: var(--pink);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 18px;
+        }
+        .pain-sec h2 {
+            font-size: clamp(24px, 4vw, 42px);
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 48px;
+            line-height: 1.3;
+        }
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pain-card {
+            background: var(--gray-bg);
+            border-radius: 18px;
+            padding: 32px 24px;
+            text-align: right;
+            border-top: 4px solid var(--pink);
+            transition: transform .3s, box-shadow .3s;
+        }
+        .pain-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(249,34,108,.12);
+        }
+        .pain-card .emoji { font-size: 36px; margin-bottom: 16px; display: block; }
+        .pain-card p { font-size: 17px; line-height: 1.7; color: #333; }
+        .pain-card strong { color: var(--purple); }
+
+        /* ═══════════════════════════════
+           WHAT YOU'LL GET
+        ═══════════════════════════════ */
+        .learn-sec {
+            background: linear-gradient(160deg, #12002a 0%, #0d0920 100%);
+            padding: 80px 20px;
+        }
+        .sec-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 18px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.2);
+            color: rgba(255,255,255,.8);
+        }
+        .learn-sec h2 {
+            font-size: clamp(24px, 4vw, 42px);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 44px;
+            line-height: 1.3;
+        }
+        .learn-list {
+            list-style: none; padding: 0;
+            display: flex; flex-direction: column; gap: 14px;
+        }
+        .learn-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.1);
+            border-right: 4px solid var(--pink);
+            border-radius: 14px;
+            padding: 18px 22px;
+            transition: background .3s;
+        }
+        .learn-item:hover { background: rgba(249,34,108,.1); }
+        .learn-arrow { color: var(--pink); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+        .learn-text { font-size: 18px; line-height: 1.6; color: rgba(255,255,255,.88); }
+
+        /* ═══════════════════════════════
+           FORM SECTION
+        ═══════════════════════════════ */
+        .form-sec {
+            background: var(--pink);
+            padding: 72px 20px;
+        }
+        .form-box {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .form-h1 {
+            font-size: clamp(26px, 5vw, 46px);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+            font-family: 'Assistant', sans-serif;
+            line-height: 1.2;
+        }
+        .form-sub {
+            font-size: clamp(15px, 2.5vw, 19px);
+            color: rgba(255,255,255,.88);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .form-card {
+            background: rgba(255,255,255,.18);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,.35);
+            border-radius: 20px;
+            padding: 36px;
+        }
+        .form-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .f-field { margin-bottom: 12px; }
+        .f-field label {
+            display: block;
+            color: rgba(255,255,255,.85);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-align: right;
+        }
+        .f-field input {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 2px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.95);
+            font-size: 15px;
+            font-family: 'Rubik', sans-serif;
+            color: #333;
+            direction: rtl;
+            transition: border-color .25s;
+        }
+        .f-field input:focus { outline: none; border-color: white; }
+
+        .consent-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 18px;
+            text-align: right;
+        }
+        .consent-row input[type="checkbox"] {
+            width: 18px; height: 18px;
+            flex-shrink: 0; margin-top: 2px;
+            accent-color: #111; cursor: pointer;
+        }
+        .consent-row label {
+            font-size: 13px;
+            color: rgba(255,255,255,.85);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 18px;
+            background: #111;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background .25s, transform .25s, box-shadow .25s;
+            font-family: 'Assistant', sans-serif;
+            letter-spacing: .5px;
+        }
+        .btn-submit:hover {
+            background: #222;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,.35);
+        }
+
+        /* ═══════════════════════════════
+           TESTIMONIALS
+        ═══════════════════════════════ */
+        .testi-sec {
+            background: var(--gray-bg);
+            padding: 80px 20px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+        .testi-sec h2 {
+            font-size: clamp(22px, 3.5vw, 38px);
+            font-weight: 800;
+            color: var(--pink);
+            margin-bottom: 44px;
+        }
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .testi-card {
+            background: white;
+            border-radius: 18px;
+            padding: 26px;
+            box-shadow: 0 6px 30px rgba(0,0,0,.07);
+            transition: transform .3s, box-shadow .3s;
+            position: relative;
+            text-align: right;
+        }
+        .testi-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px; left: 16px;
+            font-size: 70px;
+            color: rgba(159,33,207,.08);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        .testi-card:hover { transform: translateY(-7px); box-shadow: 0 18px 55px rgba(249,34,108,.12); }
+        .stars { color: var(--purple); font-size: 16px; margin-bottom: 12px; letter-spacing: 2px; }
+        .testi-body { font-size: 14px; color: #555; line-height: 1.75; margin-bottom: 20px; }
+        .testi-author { display: flex; align-items: center; gap: 12px; }
+        .testi-author img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+        .testi-name { font-size: 14px; font-weight: 700; color: #1a1a2e; }
+        .testi-role { font-size: 12px; color: var(--pink); }
+
+        /* ═══════════════════════════════
+           ABOUT
+        ═══════════════════════════════ */
+        .about-sec {
+            background: white;
+            padding: 80px 20px;
+            color: #1a1a2e;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 52px;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-size: clamp(22px, 3.5vw, 34px);
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: #1a1a2e;
+        }
+        .about-text p { font-size: 17px; line-height: 1.85; color: #444; margin-bottom: 14px; }
+        .win-badge {
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+
+        /* ═══════════════════════════════
+           LOGO FOOTER
+        ═══════════════════════════════ */
+        .logo-foot {
+            background: white;
+            padding: 36px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        .logo-foot img { height: 52px; object-fit: contain; }
+
+        /* ═══════════════════════════════
+           STICKY BAR
+        ═══════════════════════════════ */
+        .sticky {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(8,8,18,.94);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(249,34,108,.3);
+            padding: 12px 24px;
+            display: flex; align-items: center; justify-content: center; gap: 20px;
+            z-index: 999;
+            transform: translateY(100%);
+            transition: transform .35s ease;
+        }
+        .sticky.show { transform: translateY(0); }
+        .sticky-text { font-size: 14px; font-weight: 600; color: white; }
+        .sticky-text span { color: var(--pink); }
+        .btn-sticky {
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 10px 26px;
+            border-radius: 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .btn-sticky:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249,34,108,.4); }
+
+        /* ═══════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════ */
+        @media (max-width: 768px) {
+            .pain-grid { grid-template-columns: 1fr; }
+            .testi-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-grid .reveal-r { order: -1; }
+            .form-row-2 { grid-template-columns: 1fr; }
+            .form-card { padding: 24px 16px; }
+            .sticky { flex-direction: column; gap: 8px; padding: 12px 16px; }
+            .hero-date-pill { flex-direction: column; gap: 8px; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .btn-cta { font-size: 18px; padding: 16px 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+    <div class="hero-orb orb-a"></div>
+    <div class="hero-orb orb-b"></div>
+    <div id="particles"></div>
+
+    <div class="hero-badge">ويبينار مجاني لأصحاب المصالح</div>
+
+    <h1 class="hero-title">
+        تعمل بلا توقف…<br>
+        <span class="grad">ومصلحتك لا تنمو؟</span>
+    </h1>
+
+    <p class="hero-sub">
+        في ساعة ونصف، ستفهم لماذا يحدث هذا —<br>
+        وما الذي يجب أن تغيّره لتبدأ في رؤية نتائج حقيقية.
+    </p>
+
+    <div class="hero-date-pill">
+        <div class="cal-icon">📅</div>
+        <span>10.06.26 | من الساعة 10:00 حتى 11:30 صباحًا</span>
+    </div>
+
+    <a href="#register" class="btn-cta">احجز مكانك مجانًا →</a>
+    <p class="hero-free-note">مجاني تمامًا · محدود الأماكن</p>
+</section>
+
+<hr class="gradient-hr">
+
+<!-- ══════════════ PAIN ══════════════ -->
+<section class="pain-sec">
+    <div class="container">
+        <div class="reveal">
+            <span class="pain-label">هل يبدو هذا مألوفًا؟</span>
+        </div>
+        <h2 class="reveal d1">
+            كثيرٌ من أصحاب المصالح يشعرون بهذا كل يوم
+        </h2>
+
+        <div class="pain-grid">
+            <div class="pain-card reveal d1">
+                <span class="emoji">😓</span>
+                <p>تعمل ساعات طويلة… لكن في نهاية الشهر <strong>الأرقام لا تتحرك</strong> كما تتوقع.</p>
+            </div>
+            <div class="pain-card reveal d2">
+                <span class="emoji">🔄</span>
+                <p>جرّبت أدوات جديدة، ذكاء اصطناعي، حملات تسويقية… <strong>والمشكلة ما زالت هي نفسها.</strong></p>
+            </div>
+            <div class="pain-card reveal d3">
+                <span class="emoji">🏃</span>
+                <p>تشعر أن مصلحتك <strong>تقودك</strong> من موضوع لآخر… بدلًا من أن تقودها أنت.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ WHAT YOU'LL LEARN ══════════════ -->
+<section class="learn-sec">
+    <div class="container">
+        <div class="reveal" style="margin-bottom:8px;">
+            <span class="sec-label">ماذا ستكتشف</span>
+        </div>
+        <h2 class="reveal d1">في ساعة ونصف ستخرج بإجابات واضحة</h2>
+
+        <ul class="learn-list">
+            <li class="learn-item reveal d1">
+                <span class="learn-arrow">◀◀</span>
+                <span class="learn-text">أين يتسرّب المال من مصلحتك — حتى عندما يكون لديك عملاء وحركة.</span>
+            </li>
+            <li class="learn-item reveal d2">
+                <span class="learn-arrow">◀◀</span>
+                <span class="learn-text">لماذا المزيد من الجهد والأدوات لن يُحقّقا نموًا بدون هيكل واضح.</span>
+            </li>
+            <li class="learn-item reveal d3">
+                <span class="learn-arrow">◀◀</span>
+                <span class="learn-text">الفرق بين إدارة تعتمد على ردود الأفعال… وإدارة تصنع أرباحًا حقيقية.</span>
+            </li>
+            <li class="learn-item reveal d4">
+                <span class="learn-arrow">◀◀</span>
+                <span class="learn-text">الخطوة الأولى الفعلية نحو بناء منظومة عمل واحدة واضحة ومستقرة.</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ══════════════ FORM ══════════════ -->
+<section class="form-sec" id="register">
+    <div class="form-box">
+        <h2 class="form-h1 reveal">احجز مكانك في الويبينار</h2>
+        <p class="form-sub reveal d1">مجاني تمامًا · يوم الثلاثاء 10.06.26 | 10:00 – 11:30 صباحًا</p>
+
+        <div class="form-card reveal d2">
+            <form onsubmit="submitForm(event, this)">
+                <div class="form-row-2">
+                    <div class="f-field">
+                        <label>الاسم الشخصي <span style="color:#111">*</span></label>
+                        <input type="text" placeholder="الاسم الشخصي" required>
+                    </div>
+                    <div class="f-field">
+                        <label>اسم العائلة <span style="color:#111">*</span></label>
+                        <input type="text" placeholder="اسم العائلة" required>
+                    </div>
+                </div>
+                <div class="form-row-2">
+                    <div class="f-field">
+                        <label>البريد الإلكتروني <span style="color:#111">*</span></label>
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="f-field">
+                        <label>رقم الهاتف المحمول</label>
+                        <input type="tel" placeholder="رقم الهاتف المحمول">
+                    </div>
+                </div>
+                <div class="consent-row">
+                    <input type="checkbox" id="c1" checked required>
+                    <label for="c1">أوافق على تلقي مراسلات تسويقية عبر البريد الإلكتروني و/أو الرسائل النصية (SMS) و/أو تطبيق واتساب</label>
+                </div>
+                <button type="submit" class="btn-submit">احجز مكاني مجانًا →</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<hr class="gradient-hr">
+
+<!-- ══════════════ TESTIMONIALS ══════════════ -->
+<section class="testi-sec">
+    <div class="container">
+        <div class="reveal" style="margin-bottom:8px;">
+            <span class="pain-label">آراء المشاركين</span>
+        </div>
+        <h2 class="reveal d1">ماذا قال أصحاب المصالح بعد الويبينار؟</h2>
+
+        <div class="testi-grid">
+            <div class="testi-card reveal d1">
+                <div class="stars">★★★★★</div>
+                <p class="testi-body">ويبينار رائع، وقد ساعدني كثيرًا على توضيح اتجاه عملي وتركيز جهودي بشكل أفضل. المحتوى كان عمليًا وواضحًا، وفتح أمامي طريقة تفكير جديدة.</p>
+                <div class="testi-author">
+                    <img src="https://content.smoove.io/info_wewin-consulting_com/Content/%D7%9E%D7%93%D7%99%D7%94%2011%20(4).png" alt="">
+                    <div><div class="testi-name">منار قاسم</div><div class="testi-role">مستشارة تربوية</div></div>
+                </div>
+            </div>
+            <div class="testi-card reveal d2">
+                <div class="stars">★★★★★</div>
+                <p class="testi-body">مهنية، حادّة، طاقة ترفع كل من حولها. محتوى قوي يترك أثرًا حقيقيًا ويدفع للتفكير والعمل بطريقة مختلفة.</p>
+                <div class="testi-author">
+                    <img src="https://content.smoove.io/info_wewin-consulting_com/Content/%D7%9E%D7%93%D7%99%D7%94%2011%20(3).png" alt="">
+                    <div><div class="testi-name">توفيق مقلدة</div><div class="testi-role">المدير التنفيذي لكلية The Marketers</div></div>
+                </div>
+            </div>
+            <div class="testi-card reveal d3">
+                <div class="stars">★★★★★</div>
+                <p class="testi-body">أسلوب تقديم المحتوى كان ممتعًا وجذابًا. خرجتُ بأفكار جديدة وطاقة حقيقية للاستمرار والتقدّم.</p>
+                <div class="testi-author">
+                    <img src="https://content.smoove.io/info_wewin-consulting_com/Content/%D7%9E%D7%93%D7%99%D7%94%2011%20(2).png" alt="">
+                    <div><div class="testi-name">ابتسام حلبي</div><div class="testi-role">مؤسِّسة Flowery</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section class="about-sec">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text reveal-l">
+                <h2>مرحبًا، أنا هبة حلبي</h2>
+                <p>مهندسة صناعة وإدارة، مستشارة في بناء أنظمة العمل، ومدرّبة دولية مع أكثر من 10 سنوات من الخبرة في مرافقة أصحاب المصالح والشركات.</p>
+                <p>بعد مرافقة مئات المشاريع، أدركت أن النجاح لا يأتي من الاجتهاد العشوائي — بل من بناء مصلحة تُدار كنظام واضح. لهذا أسّست <span class="win-badge">WIN SYSTEM™</span>.</p>
+                <a href="#register" class="btn-cta" style="margin-top:20px; animation:none; font-size:17px; padding:14px 36px;">احجز مكانك مجانًا →</a>
+            </div>
+            <div class="reveal-r">
+                <img src="https://content.vp4.me/info_wewin-consulting_com/Content/222_900x900-r%20(1).png" alt="هبة حلبي" style="width:100%; border-radius:22px; box-shadow:0 20px 60px rgba(249,34,108,.2);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ LOGO FOOTER ══════════════ -->
+<div class="logo-foot">
+    <img src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png" alt="Hiba Logo">
+</div>
+
+<!-- ══════════════ STICKY BAR ══════════════ -->
+<div class="sticky" id="stickyBar">
+    <span class="sticky-text">10.06.26 | <span>ويبينار مجاني</span> | 10:00 – 11:30 صباحًا</span>
+    <a href="#register" class="btn-sticky">احجز مجانًا →</a>
+</div>
+
+<script>
+    // ─── PARTICLES ───
+    (function() {
+        const c = document.getElementById('particles');
+        const colors = ['rgba(249,34,108,.6)','rgba(159,33,207,.6)','rgba(255,255,255,.25)'];
+        for (let i = 0; i < 30; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const sz = Math.random() * 3 + 2;
+            p.style.cssText = `
+                left:${Math.random()*100}%;
+                top:${Math.random()*100}%;
+                width:${sz}px; height:${sz}px;
+                background:${colors[i%3]};
+                animation-duration:${Math.random()*14+9}s;
+                animation-delay:${Math.random()*12}s;
+            `;
+            c.appendChild(p);
+        }
+    })();
+
+    // ─── SCROLL REVEAL ───
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el => io.observe(el));
+
+    // ─── STICKY BAR ───
+    const bar = document.getElementById('stickyBar');
+    window.addEventListener('scroll', () => {
+        bar.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+
+    // ─── FORM SUBMIT ───
+    function submitForm(e, form) {
+        e.preventDefault();
+        const btn = form.querySelector('.btn-submit');
+        const inputs = form.querySelectorAll('input');
+        const data = {
+            first_name: inputs[0].value,
+            last_name:  inputs[1].value,
+            email:      inputs[2].value,
+            phone:      inputs[3].value,
+            source:     'webinar-cold-page'
+        };
+        btn.disabled = true;
+        fetch('https://hook.eu2.make.com/8wcu6nxpa5h967e5jzzwhvmvfq30bxxj', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).finally(() => {
+            window.location.href = 'thank-you.html';
+        });
+    }
+
+    // ─── SMOOTH SCROLL ───
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const t = document.querySelector(a.getAttribute('href'));
+            if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // ─── META PIXEL LEAD ───
+    window.addEventListener('load', () => {
+        if (typeof fbq === 'function') fbq('track', 'Lead');
+    });
+</script>
+</body>
+</html>
