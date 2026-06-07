@@ -655,15 +655,9 @@
 
         <div class="form-card reveal d2">
             <form onsubmit="submitForm(event, this)">
-                <div class="form-row-2">
-                    <div class="f-field">
-                        <label>الاسم الشخصي <span style="color:#111">*</span></label>
-                        <input type="text" placeholder="الاسم الشخصي" required>
-                    </div>
-                    <div class="f-field">
-                        <label>اسم العائلة <span style="color:#111">*</span></label>
-                        <input type="text" placeholder="اسم العائلة" required>
-                    </div>
+                <div class="f-field">
+                    <label>الاسم الكامل <span style="color:#111">*</span></label>
+                    <input type="text" placeholder="الاسم الكامل" required>
                 </div>
                 <div class="form-row-2">
                     <div class="f-field">
@@ -791,10 +785,9 @@
         const btn = form.querySelector('.btn-submit');
         const inputs = form.querySelectorAll('input');
         const data = {
-            first_name: inputs[0].value,
-            last_name:  inputs[1].value,
-            email:      inputs[2].value,
-            phone:      inputs[3].value,
+            full_name:  inputs[0].value,
+            email:      inputs[1].value,
+            phone:      inputs[2].value,
             source:     'webinar-cold-page'
         };
         btn.disabled = true;
