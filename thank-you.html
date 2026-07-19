@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="he-IL" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شكراً لك — THE CHANGE مع هبة حلبي</title>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<!-- Meta Pixel Code -->
+<title>המקום שלך נשמר! — WHAT IS THE CHANGE עם היבא חלבי</title>
+<meta http-equiv="refresh" content="4; URL=https://chat.whatsapp.com/KarAGIakS210X3IWYcZ9VQ">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,32 +23,38 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '291370482973620');
 fbq('track', 'PageView');
+fbq('track', 'Lead');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=291370482973620&ev=PageView&noscript=1"
-/></noscript>
-<script>
-window.addEventListener('load', function() {
-    fbq('track', 'Lead');
-});
-</script>
-<!-- End Meta Pixel Code -->
-<style>
+src="https://www.facebook.com/tr?id=291370482973620&ev=Lead&noscript=1"/></noscript>
 
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110491147-3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-110491147-3');
+</script>
+
+<style>
+/* ─── BRAND TOKENS ───────────────────────────── */
 :root {
-  --purple:      #9421DB;
-  --purple-light:#f3e8ff;
-  --purple-mid:  #e9d5ff;
-  --pink:        #FA226B;
-  --pink-light:  #fce7f3;
-  --black:       #111111;
-  --gray-900:    #1a1a2e;
-  --gray-700:    #374151;
-  --gray-500:    #6B7280;
-  --gray-300:    #D1D5DB;
-  --gray-100:    #F3F4F6;
-  --gray-50:     #F9FAFB;
-  --white:       #FFFFFF;
+  --pink:        #f9226c;
+  --purple:      #9f21cf;
+  --pink-purple: #bb2eb6;
+  --light-pink:  #f1307b;
+
+  --grad:        linear-gradient(135deg, #f9226c, #9f21cf);
+  --grad-wide:   linear-gradient(135deg, #f9226c, #bb2eb6, #9f21cf);
+
+  --white:    #ffffff;
+  --black:    #111111;
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-500: #6b7280;
+  --gray-900: #1a1a2e;
 
   --radius-sm:   8px;
   --radius-md:   14px;
@@ -50,17 +62,19 @@ window.addEventListener('load', function() {
   --radius-xl:   36px;
   --radius-full: 999px;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
-  --shadow-md: 0 4px 16px rgba(0,0,0,.08);
-  --shadow-lg: 0 12px 40px rgba(0,0,0,.10);
-  --shadow-purple: 0 8px 32px rgba(148,33,219,.18);
+  --shadow-sm:    0 1px 3px rgba(0,0,0,.08);
+  --shadow-md:    0 4px 16px rgba(0,0,0,.10);
+  --shadow-lg:    0 12px 40px rgba(0,0,0,.12);
+  --shadow-brand: 0 8px 32px rgba(159,33,207,.22);
 }
 
+/* ─── RESET ──────────────────────────────────── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
+img  { display:block; max-width:100%; }
 
 body {
-  font-family: 'Rubik', 'Assistant', sans-serif;
+  font-family: 'Assistant', Arial, sans-serif;
   background: var(--white);
   color: var(--gray-900);
   direction: rtl;
@@ -71,19 +85,22 @@ body {
   flex-direction: column;
 }
 
-.grad {
-  background: linear-gradient(120deg, var(--purple) 0%, var(--pink) 100%);
+.grad-text {
+  background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ─── NAVBAR ─────────────────────────────────── */
-#nav {
-  background: rgba(255,255,255,.95);
+/* ─── NAV ────────────────────────────────────── */
+.nav {
+  background: rgba(255,255,255,.96);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--gray-100);
   box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .nav-inner {
   max-width: 1080px;
@@ -94,302 +111,596 @@ body {
   align-items: center;
   justify-content: center;
 }
-.nav-logo img { height: 40px; }
+.nav-logo { height: 38px; }
 
-/* ─── MAIN ───────────────────────────────────── */
-main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 24px;
-  background: linear-gradient(160deg, var(--purple-light) 0%, var(--white) 50%, var(--pink-light) 100%);
-}
-
-/* ─── CARD ───────────────────────────────────── */
-.card {
-  background: var(--white);
-  border: 1px solid var(--gray-100);
-  border-radius: var(--radius-xl);
-  padding: 64px 56px;
-  box-shadow: var(--shadow-lg);
-  max-width: 680px;
-  width: 100%;
+/* ─── HERO ───────────────────────────────────── */
+.hero {
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.52) 0%, rgba(0,0,0,.35) 100%),
+    url('https://content.vp4.me/info_wewin-consulting_com/Content/111166_1980x1320-r.jpg') center/cover no-repeat;
+  padding: 64px 24px 80px;
   text-align: center;
-  animation: cardIn .7s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  animation: fadeUp .7s ease both;
 }
 
-@keyframes cardIn {
-  from { opacity: 0; transform: translateY(32px) scale(.97); }
-  to   { opacity: 1; transform: none; }
+.hero-webinar {
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 900;
+  color: var(--pink);
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hero-tagline {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 40px;
+  opacity: .95;
 }
 
-/* ─── CHECK ICON ─────────────────────────────── */
-.check-wrap {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--purple), var(--pink));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 32px;
-  box-shadow: var(--shadow-purple);
-  animation: popIn .6s .3s cubic-bezier(.34,1.56,.64,1) both;
-}
-
-@keyframes popIn {
-  from { opacity: 0; transform: scale(.4); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-.check-icon {
-  width: 48px;
-  height: 48px;
-  stroke: white;
-  stroke-width: 3;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.check-path {
-  stroke-dasharray: 60;
-  stroke-dashoffset: 60;
-  animation: drawCheck .5s .8s ease forwards;
-}
-
-@keyframes drawCheck {
-  to { stroke-dashoffset: 0; }
-}
-
-/* ─── BADGE ──────────────────────────────────── */
-.badge {
+.hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 14px;
+  gap: 8px;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.35);
+  backdrop-filter: blur(8px);
   border-radius: var(--radius-full);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-  background: var(--purple-light);
-  color: var(--purple);
-  margin-bottom: 20px;
-  animation: fadeUp .6s .4s ease both;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+.badge-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74,222,128,.35);
+  flex-shrink: 0;
+  animation: pulseDot 1.6s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%,100% { opacity:1; }
+  50%      { opacity:.4; }
 }
 
-.title {
-  font-size: clamp(30px, 4vw, 44px);
+.hero-title {
+  font-size: clamp(26px, 4vw, 46px);
   font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1px;
-  margin-bottom: 16px;
-  color: var(--black);
-  animation: fadeUp .6s .5s ease both;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 18px;
 }
-
-.subtitle {
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--gray-500);
+.hero-sub {
+  font-size: clamp(16px, 2vw, 20px);
+  color: rgba(255,255,255,.88);
+  line-height: 1.75;
   margin-bottom: 40px;
-  animation: fadeUp .6s .6s ease both;
 }
 
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(20px); }
-  to   { opacity:1; transform:none; }
+/* ─── COUNTDOWN BANNER ───────────────────────── */
+.redirect-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.28);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: right;
+}
+.redirect-icon { font-size: 26px; flex-shrink: 0; }
+.redirect-text {
+  flex: 1;
+  font-size: 15px;
+  color: rgba(255,255,255,.92);
+  line-height: 1.5;
+}
+.redirect-text strong { color: var(--white); font-weight: 800; }
+.progress-track {
+  height: 4px;
+  background: rgba(255,255,255,.22);
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--pink), #4ade80);
+  border-radius: 2px;
+  transform-origin: right;
+  animation: shrinkBar 4s linear forwards;
+}
+@keyframes shrinkBar {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
+
+/* ─── SECTION BASE ───────────────────────────── */
+.section {
+  padding: 64px 24px;
+}
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--black);
+}
+.section-sub {
+  font-size: 18px;
+  color: var(--gray-500);
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 44px;
+  font-weight: 600;
 }
 
 /* ─── STEPS ──────────────────────────────────── */
-.steps {
+.steps-section { background: var(--white); }
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.step-card {
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 40px;
-  text-align: right;
-  animation: fadeUp .6s .7s ease both;
+  align-items: center;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
 }
-
-.step {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  background: var(--gray-50);
-  border: 1px solid var(--gray-100);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
-  transition: border-color .2s, box-shadow .2s;
+.step-card:hover {
+  border-color: #e9d5ff;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
 }
-.step:hover { border-color: var(--purple-mid); box-shadow: var(--shadow-sm); }
 
 .step-num {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
+  width: 42px; height: 42px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--purple), var(--pink));
-  color: white;
-  font-size: 13px;
-  font-weight: 700;
+  background: var(--grad);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-brand);
 }
-
-.step-text strong {
-  display: block;
-  font-size: 15px;
+.step-icon { font-size: 54px; line-height: 1; margin-bottom: 16px; }
+.step-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--purple);
+  margin-bottom: 8px;
+}
+.step-required {
+  display: inline-block;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--black);
-  margin-bottom: 2px;
+  color: var(--pink);
+  background: #fce7f3;
+  border-radius: var(--radius-full);
+  padding: 3px 12px;
+  margin-bottom: 14px;
 }
-.step-text span { font-size: 13px; color: var(--gray-500); }
-
-/* ─── DIVIDER ────────────────────────────────── */
-.divider {
-  width: 48px;
-  height: 3px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--purple), var(--pink));
-  margin: 0 auto 32px;
-  animation: fadeUp .6s .65s ease both;
+.step-desc {
+  font-size: 16px;
+  color: var(--gray-500);
+  line-height: 1.75;
+  margin-bottom: 28px;
+  flex: 1;
 }
 
-/* ─── BUTTON ─────────────────────────────────── */
-.btn-back {
+/* ─── DATE BADGE ─────────────────────────────── */
+.date-badge {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f3e8ff;
+  border: 1px solid #e9d5ff;
+  border-radius: var(--radius-md);
+  padding: 11px 16px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--purple);
+  margin-bottom: 20px;
+}
+
+/* ─── BUTTONS ────────────────────────────────── */
+.btn-stack { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 32px;
+  padding: 14px 28px;
   border-radius: var(--radius-full);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity .2s, transform .15s, box-shadow .2s;
+}
+.btn:active { transform: scale(.97); }
+
+.btn-primary {
+  background: var(--grad);
+  color: var(--white);
+  box-shadow: var(--shadow-brand);
+}
+.btn-primary:hover { opacity: .88; box-shadow: 0 12px 40px rgba(159,33,207,.3); }
+
+.btn-outline {
   background: transparent;
   color: var(--purple);
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 600;
-  border: 1.5px solid var(--purple-mid);
-  cursor: pointer;
-  text-decoration: none;
-  transition: background .2s, box-shadow .2s;
-  animation: fadeUp .6s .85s ease both;
+  border: 1.5px solid var(--purple);
 }
-.btn-back:hover { background: var(--purple-light); box-shadow: var(--shadow-sm); }
+.btn-outline:hover { background: #f3e8ff; }
+
+/* ─── PREPARE SECTION ────────────────────────── */
+.prepare-section {
+  background: linear-gradient(160deg, #f3e8ff 0%, var(--white) 55%, #fce7f3 100%);
+}
+.prepare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.prepare-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.prepare-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: #e9d5ff;
+}
+.prepare-icon { font-size: 48px; margin-bottom: 14px; }
+.prepare-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--pink);
+  margin-bottom: 8px;
+}
+.prepare-card p {
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.65;
+}
+
+/* ─── SPEAKER SECTION ────────────────────────── */
+.speaker-section { padding: 0 24px 64px; }
+.speaker-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--grad-wide);
+  border-radius: var(--radius-xl);
+  padding: 52px 56px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  overflow: hidden;
+  position: relative;
+}
+.speaker-inner::before {
+  content: '';
+  position: absolute;
+  top: -50px; left: -50px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+}
+.speaker-inner::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+}
+.speaker-text { flex: 1; z-index: 1; }
+.speaker-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 10px;
+}
+.speaker-heading {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.speaker-name {
+  font-size: 17px;
+  color: rgba(255,255,255,.85);
+  line-height: 1.6;
+  font-weight: 400;
+}
+.speaker-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0,0,0,.28);
+}
 
 /* ─── FOOTER ─────────────────────────────────── */
 footer {
   background: var(--gray-900);
-  color: var(--white);
   padding: 40px 24px;
   text-align: center;
+  margin-top: auto;
 }
-footer img  { height: 44px; margin: 0 auto 16px; opacity: .8; }
-footer p    { font-size: 12px; color: rgba(255,255,255,.4); }
+.footer-logo { height: 40px; margin: 0 auto 14px; opacity: .72; }
+footer p { font-size: 12px; color: rgba(255,255,255,.35); }
 
 /* ─── CONFETTI ───────────────────────────────── */
 .confetti-wrap {
-  position: fixed;
-  inset: 0;
+  position: fixed; inset: 0;
   pointer-events: none;
   z-index: 999;
   overflow: hidden;
 }
-.confetti-piece {
+.cp {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  top: -16px;
-  border-radius: 2px;
-  animation: confettiFall linear forwards;
+  top: -14px;
+  animation: fall linear forwards;
 }
-@keyframes confettiFall {
-  0%   { transform: translateY(0) rotate(0deg);    opacity: 1; }
+@keyframes fall {
+  0%   { transform: translateY(0) rotate(0deg);      opacity: 1; }
   100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
 }
 
+/* ─── ANIMATIONS ─────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+.fade-up          { animation: fadeUp .65s ease both; }
+.delay-1          { animation-delay: .12s; }
+.delay-2          { animation-delay: .22s; }
+.delay-3          { animation-delay: .32s; }
+
 /* ─── RESPONSIVE ─────────────────────────────── */
-@media (max-width: 600px) {
-  .card { padding: 40px 24px; }
-  .title { font-size: 28px; }
+@media (max-width: 768px) {
+  .steps-grid    { grid-template-columns: 1fr; }
+  .prepare-grid  { grid-template-columns: 1fr; }
+
+  .speaker-inner {
+    flex-direction: column-reverse;
+    padding: 36px 24px;
+    gap: 28px;
+    text-align: center;
+  }
+  .speaker-photo { width: 180px; height: 180px; }
 }
 
+@media (max-width: 480px) {
+  .hero       { padding: 44px 20px 60px; }
+  .section    { padding: 44px 20px; }
+  .step-card  { padding: 32px 20px; }
+}
 </style>
 </head>
 <body>
 
-<!-- ═══ NAVBAR ══════════════════════════════════════ -->
-<nav id="nav">
+<!-- CONFETTI -->
+<div class="confetti-wrap" id="confetti"></div>
+
+<!-- NAV -->
+<nav class="nav">
   <div class="nav-inner">
-    <div class="nav-logo">
-      <img src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png" alt="هبة الحلبي">
-    </div>
+    <img class="nav-logo"
+      src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png"
+      alt="היבא חלבי">
   </div>
 </nav>
 
-<!-- ═══ CONFETTI ═════════════════════════════════════ -->
-<div class="confetti-wrap" id="confetti"></div>
+<!-- ═══ HERO ═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-webinar">WHAT IS THE CHANGE</div>
+    <div class="hero-tagline">השינוי שמייצר כסף. נקודה.</div>
 
-<!-- ═══ MAIN ═════════════════════════════════════════ -->
-<main>
-  <div class="card">
-
-    <!-- Check icon -->
-    <div class="check-wrap">
-      <svg class="check-icon" viewBox="0 0 48 48">
-        <path class="check-path" d="M10 26 L20 36 L38 14"/>
-      </svg>
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      המקום שלך נשמר בהצלחה
     </div>
 
-    <div class="badge">✦ تم التسجيل بنجاح</div>
+    <h1 class="hero-title">איזה כיף, המקום שלך בוובינר נשמר! 🎉</h1>
 
-    <h1 class="title">شكراً لك! 🎉<br><span class="grad">نراك في THE CHANGE</span></h1>
-
-    <div class="divider"></div>
-
-    <p class="subtitle">
-      وصلنا طلب تسجيلك بنجاح.<br>
-      سيتواصل معك فريقنا في أقرب وقت ممكن لتأكيد مكانك.
+    <p class="hero-sub">
+      הצעד הראשון לשינוי שמייצר כסף כבר קרה.<br>
+      עכשיו, כדי לוודא ששום דבר לא ימנע ממך להגיע ולהכפיל הכנסות,<br>
+      יש לנו עוד שני צעדים קטנים לסיום:
     </p>
 
-    <a href="index.html" class="btn-back">← العودة للصفحة الرئيسية</a>
-
+    <div class="redirect-bar">
+      <span class="redirect-icon">💬</span>
+      <div class="redirect-text">
+        <strong>מועבר אוטומטית לקבוצת הוואטסאפ בעוד <span id="countdown">4</span> שניות...</strong>
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
   </div>
-</main>
+</section>
 
-<!-- ═══ FOOTER ════════════════════════════════════════ -->
+<!-- ═══ STEPS ═══════════════════════════════════════════ -->
+<section class="section steps-section">
+  <div class="section-inner">
+    <div class="steps-grid">
+
+      <!-- Step 1: WhatsApp -->
+      <div class="step-card fade-up delay-1">
+        <div class="step-num">1</div>
+        <div class="step-icon">💬</div>
+        <h2 class="step-title">הצטרפות לקבוצת העדכונים</h2>
+        <span class="step-required">חובה!</span>
+        <p class="step-desc">
+          כל החומרים המקצועיים, חוברת העבודה ולינק הכניסה לשידור
+          יישלחו אך ורק בקבוצת הוואטסאפ השקטה שלנו.
+        </p>
+        <a href="https://chat.whatsapp.com/DRVpYnx8aApAyhe9wJEr0m"
+           class="btn btn-primary" target="_blank">
+          👍&nbsp; אני רוצה להצטרף לקבוצת הוואטסאפ
+        </a>
+      </div>
+
+      <!-- Step 2: Calendar -->
+      <div class="step-card fade-up delay-2">
+        <div class="step-num">2</div>
+        <div class="step-icon">📅</div>
+        <h2 class="step-title">שריינו את היומן</h2>
+        <p class="step-desc">
+          השינוי מתחיל בניהול הזמן שלך.
+          אל תתנו לשגרה "לבלוע" את המפגש הזה.
+        </p>
+        <div class="date-badge">
+          📌&nbsp; יום חמישי &nbsp;|&nbsp; 10.06.26 &nbsp;|&nbsp; 10:00–11:30
+        </div>
+        <div class="btn-stack">
+          <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=%D7%95%D7%95%D7%91%D7%99%D7%A0%D7%A8%20what%20is%20the%20change%20%D7%A2%D7%9D%20%D7%94%D7%99%D7%91%D7%90%20%D7%97%D7%9C%D7%91%D7%99&startdt=2026-06-10T10:00:00&enddt=2026-06-10T11:30:00&body=%D7%95%D7%95%D7%91%D7%99%D7%A0%D7%A8&location=ZOOM"
+             class="btn btn-primary" target="_blank">
+            📆&nbsp; הוספה ליומן Outlook
+          </a>
+          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NzFqMzRjOW42cGhqNmJiMTZrb2oyYjlrNjhyMzhiOW9jb3FtOGI5bmNrc21hb3BtYzRvamNjaG42byBoaWJhQHdld2luLWNvbnN1bHRpbmcuY29t&tmsrc=hiba%40wewin-consulting.com"
+             class="btn btn-outline" target="_blank">
+            📆&nbsp; הוספה ליומן Google
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PREPARE ══════════════════════════════════════════ -->
+<section class="section prepare-section">
+  <div class="section-inner">
+    <h2 class="section-title fade-up">מה מחכה לך בוובינר?</h2>
+    <p class="section-sub fade-up delay-1">
+      במפגש נצלול לתוך מערכת ההפעלה העסקית ונבין איך לייצר שינוי אמיתי שמייצר כסף.<br>
+      כדאי להכין מראש:
+    </p>
+    <div class="prepare-grid">
+      <div class="prepare-card fade-up delay-1">
+        <div class="prepare-icon">📋</div>
+        <h3>דפי עבודה</h3>
+        <p>יישלחו בקבוצה, מומלץ להדפיס אותם מראש.</p>
+      </div>
+      <div class="prepare-card fade-up delay-2">
+        <div class="prepare-icon">🧠</div>
+        <h3>ראש פתוח</h3>
+        <p>אנחנו הולכים לאתגר את הדרך שבה פעלת עד היום.</p>
+      </div>
+      <div class="prepare-card fade-up delay-3">
+        <div class="prepare-icon">☕</div>
+        <h3>כוס קפה</h3>
+        <p>וסביבה שקטה ללא הסחות דעת.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPEAKER ══════════════════════════════════════════ -->
+<div class="speaker-section">
+  <div class="speaker-inner fade-up">
+    <div class="speaker-text">
+      <div class="speaker-eyebrow">מי תפגשי בוובינר</div>
+      <h2 class="speaker-heading">נתראה<br>בשידור 👋</h2>
+      <p class="speaker-name">
+        היבא חלבי<br>
+        מלווה עסקים להכפלת הכנסות
+      </p>
+    </div>
+    <img class="speaker-photo"
+      src="https://content.vp4.me/info_wewin-consulting_com/Content/1313_733x733-r.png"
+      alt="היבא חלבי">
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════ -->
 <footer>
-  <img src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png" alt="هبة الحلبي">
-  <p>© 2026 هبة الحلبي — جميع الحقوق محفوظة</p>
+  <img class="footer-logo"
+    src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png"
+    alt="היבא חלבי">
+  <p>© 2026 היבא חלבי — כל הזכויות שמורות</p>
 </footer>
 
-<!-- ═══ JS ════════════════════════════════════════════ -->
 <script>
-  // Confetti burst
-  (function() {
-    const colors = ['#9421DB','#FA226B','#e9d5ff','#fce7f3','#F59E0B','#10B981'];
-    const wrap = document.getElementById('confetti');
-    const count = 80;
+/* ── Confetti ── */
+(function () {
+  var colors = ['#f9226c','#9f21cf','#bb2eb6','#f1307b','#fce7f3','#e9d5ff','#fbbf24'];
+  var wrap = document.getElementById('confetti');
+  for (var i = 0; i < 100; i++) {
+    var el = document.createElement('div');
+    el.className = 'cp';
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.background = colors[Math.floor(Math.random() * colors.length)];
+    var size = (Math.random() * 8 + 5).toFixed(1) + 'px';
+    el.style.width = size;
+    el.style.height = size;
+    el.style.borderRadius = Math.random() > .5 ? '50%' : '3px';
+    var dur   = (Math.random() * 2.5 + 2).toFixed(2);
+    var delay = (Math.random() * 1.6).toFixed(2);
+    el.style.animation = 'fall ' + dur + 's ' + delay + 's linear forwards';
+    wrap.appendChild(el);
+  }
+  setTimeout(function(){ wrap.innerHTML = ''; }, 5500);
+})();
 
-    for (let i = 0; i < count; i++) {
-      const el = document.createElement('div');
-      el.classList.add('confetti-piece');
-      el.style.left     = Math.random() * 100 + 'vw';
-      el.style.background = colors[Math.floor(Math.random() * colors.length)];
-      el.style.width    = (Math.random() * 8 + 6) + 'px';
-      el.style.height   = (Math.random() * 8 + 6) + 'px';
-      el.style.borderRadius = Math.random() > .5 ? '50%' : '2px';
-      const dur  = (Math.random() * 2 + 2).toFixed(2);
-      const delay = (Math.random() * 1.2).toFixed(2);
-      el.style.animation = `confettiFall ${dur}s ${delay}s linear forwards`;
-      wrap.appendChild(el);
-    }
-
-    // Remove confetti elements after animation
-    setTimeout(() => { wrap.innerHTML = ''; }, 4500);
-  })();
+/* ── Countdown ── */
+(function () {
+  var n = 4;
+  var el = document.getElementById('countdown');
+  if (!el) return;
+  var t = setInterval(function () {
+    n--;
+    if (n <= 0) { clearInterval(t); return; }
+    el.textContent = n;
+  }, 1000);
+})();
 </script>
 
 </body>

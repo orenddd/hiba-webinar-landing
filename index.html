@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE CHANGE - برنامج التغيير الذي يصنع المال مع هبة حلبي</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '291370482973620');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=291370482973620&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+
+/* ─── TOKENS ─────────────────────────────────── */
+:root {
+  --purple:      #9421DB;
+  --purple-light:#f3e8ff;
+  --purple-mid:  #e9d5ff;
+  --pink:        #FA226B;
+  --pink-light:  #fce7f3;
+  --black:       #111111;
+  --gray-900:    #1a1a2e;
+  --gray-700:    #374151;
+  --gray-500:    #6B7280;
+  --gray-300:    #D1D5DB;
+  --gray-100:    #F3F4F6;
+  --gray-50:     #F9FAFB;
+  --white:       #FFFFFF;
+
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   24px;
+  --radius-xl:   36px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.10);
+  --shadow-purple: 0 8px 32px rgba(148,33,219,.18);
+}
+
+/* ─── RESET ──────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+img { display:block; max-width:100%; }
+
+body {
+  font-family: 'Rubik', 'Assistant', sans-serif;
+  background: var(--white);
+  color: var(--gray-900);
+  direction: rtl;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── TYPOGRAPHY SCALE ───────────────────────── */
+.t-display  { font-size: clamp(40px, 5.5vw, 72px); font-weight: 900; line-height: 1.05; letter-spacing: -1.5px; }
+.t-h1       { font-size: clamp(32px, 4vw,   56px); font-weight: 800; line-height: 1.10; letter-spacing: -1px;   }
+.t-h2       { font-size: clamp(26px, 3.2vw, 44px); font-weight: 700; line-height: 1.20; letter-spacing: -.5px;  }
+.t-h3       { font-size: clamp(20px, 2.2vw, 28px); font-weight: 700; line-height: 1.30; }
+.t-body-lg  { font-size: 18px; line-height: 1.75; }
+.t-body     { font-size: 16px; line-height: 1.70; }
+.t-caption  { font-size: 13px; line-height: 1.50; letter-spacing: .2px; }
+
+.text-gray   { color: var(--gray-500); }
+.text-purple { color: var(--purple); }
+.text-pink   { color: var(--pink); }
+
+/* Gradient text */
+.grad {
+  background: linear-gradient(120deg, var(--purple) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── LAYOUT ─────────────────────────────────── */
+.container   { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.container-sm{ max-width:  680px; margin: 0 auto; padding: 0 24px; }
+section      { padding: 96px 0; }
+
+/* ─── BUTTONS ────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all .22s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-size: 16px;
+  box-shadow: var(--shadow-purple);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(148,33,219,.28); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-lg { padding: 18px 48px; font-size: 18px; }
+.btn-xl { padding: 22px 60px; font-size: 20px; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--purple);
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  border: 1.5px solid var(--purple-mid);
+}
+.btn-outline:hover { background: var(--purple-light); }
+
+/* ─── BADGE / TAG ────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  background: var(--purple-light);
+  color: var(--purple);
+}
+
+/* ─── DIVIDER ────────────────────────────────── */
+.divider {
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--pink));
+  margin: 16px auto 0;
+}
+.divider-start { margin-inline-start: 0; }
+
+/* ─── REVEAL ANIMATIONS ──────────────────────── */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:none; } }
+@keyframes fadeIn   { from { opacity:0; }                             to { opacity:1; } }
+@keyframes scaleIn  { from { opacity:0; transform:scale(.94); }      to { opacity:1; transform:none; } }
+
+.reveal          { opacity:0; transform:translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+.reveal-scale    { opacity:0; transform:scale(.95);       transition: opacity .65s ease, transform .65s ease; }
+.reveal.visible, .reveal-scale.visible { opacity:1; transform:none; }
+.d1 { transition-delay:.08s; } .d2 { transition-delay:.16s; }
+.d3 { transition-delay:.24s; } .d4 { transition-delay:.32s; }
+.d5 { transition-delay:.40s; } .d6 { transition-delay:.48s; }
+
+/* ─── NAVBAR ─────────────────────────────────── */
+#nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  background: rgba(255,255,255,.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+#nav.scrolled {
+  border-color: var(--gray-100);
+  box-shadow: var(--shadow-sm);
+}
+.nav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo img { height: 40px; }
+
+/* ─── HERO ───────────────────────────────────── */
+#hero {
+  padding-top: 116px;
+  padding-bottom: 0;
+  background: var(--white);
+  overflow: hidden;
+}
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: center;
+  padding-bottom: 64px;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background: var(--purple-light);
+  color: var(--purple);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.hero-title { margin-bottom: 20px; color: var(--black); }
+.hero-sub   { margin-bottom: 36px; color: var(--gray-500); max-width: 480px; }
+.hero-ctas  { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-img-wrap {
+  position: relative;
+}
+.hero-img-wrap img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 2;
+}
+.hero-img-deco {
+  position: absolute;
+  inset: -20px;
+  border-radius: 48px;
+  background: linear-gradient(135deg, var(--purple-light), var(--pink-light));
+  z-index: 1;
+  transform: rotate(-2deg);
+}
+
+/* Stats row below hero */
+.hero-stats {
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-100);
+  padding: 32px 24px;
+}
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 24px;
+  border-left: 1px solid var(--gray-200, #E5E7EB);
+}
+.stat-item:last-child { border-left: none; }
+.stat-num  { font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px; }
+.stat-desc { font-size: 13px; color: var(--gray-500); }
+
+/* ─── SECTION HEADERS ────────────────────────── */
+.sec-header       { text-align: center; margin-bottom: 56px; }
+.sec-header-start { text-align: start;  margin-bottom: 40px; }
+
+/* ─── INTRO ──────────────────────────────────── */
+#intro { background: var(--white); }
+.intro-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.intro-icon-box {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius-lg);
+  background: var(--purple-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+.intro-icon-box img { width: 88px; height: 88px; object-fit: contain; }
+.intro-text p { color: var(--gray-700); margin-bottom: 14px; }
+
+/* ─── VIDEO ──────────────────────────────────── */
+#video { background: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100); }
+.video-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.video-frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-200, #E5E7EB);
+}
+.video-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:none; }
+
+/* ─── ABOUT PROGRAM ──────────────────────────── */
+#about-program { background: var(--white); }
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-text p { color: var(--gray-700); margin-bottom: 16px; }
+.logo-img {
+  max-width: 280px;
+  margin: 0 auto;
+  filter: drop-shadow(var(--shadow-md));
+}
+
+/* ─── FORM SECTION ───────────────────────────── */
+.form-wrapper {
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  padding: 80px 0;
+}
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-xl);
+  padding: 56px 48px;
+  box-shadow: var(--shadow-lg);
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.form-card h2 { margin-bottom: 8px; }
+.form-card .sub { color: var(--gray-500); margin-bottom: 36px; font-size: 16px; }
+
+.form-row    { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-row-1  { margin-bottom: 14px; }
+.field {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--gray-900);
+  background: var(--white);
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  transition: border-color .2s, box-shadow .2s;
+  text-align: right;
+  direction: rtl;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(148,33,219,.12);
+}
+.field::placeholder { color: var(--gray-300); }
+
+.terms-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 28px;
+  font-size: 13px;
+  color: var(--gray-500);
+}
+.terms-line a { color: var(--purple); text-decoration: none; }
+.terms-line input[type="checkbox"] {
+  width: 16px; height: 16px;
+  accent-color: var(--purple); cursor: pointer;
+}
+
+/* ─── THE CHANGE ─────────────────────────────── */
+#the-change { background: var(--white); }
+.change-text { max-width: 680px; margin: 0 auto; text-align: center; }
+.change-text p { color: var(--gray-700); margin-bottom: 16px; }
+
+/* ─── FOR WHO ─────────────────────────────────── */
+#for-who { background: var(--gray-50); border-top: 1px solid var(--gray-100); }
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.who-card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.who-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--purple-mid);
+  transform: translateY(-3px);
+}
+.who-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--purple-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.who-card p { font-size: 15px; color: var(--gray-700); line-height: 1.6; }
+
+/* ─── STRUCTURE ──────────────────────────────── */
+#structure { background: var(--white); }
+.struct-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.struct-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 32px 20px;
+  text-align: center;
+  transition: box-shadow .2s, border-color .2s, transform .2s;
+}
+.struct-card:hover {
+  box-shadow: var(--shadow-purple);
+  border-color: var(--purple-mid);
+  transform: translateY(-4px);
+}
+.struct-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+.struct-num  { font-size: 34px; font-weight: 900; color: var(--purple); margin-bottom: 6px; }
+.struct-label{ font-size: 14px; color: var(--gray-500); font-weight: 500; }
+
+/* ─── ABOUT HIBA ─────────────────────────────── */
+#about-hiba { background: var(--gray-50); border-top: 1px solid var(--gray-100); }
+.hiba-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.hiba-img-wrap {
+  position: relative;
+}
+.hiba-img-wrap img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  position: relative; z-index: 2;
+}
+.hiba-img-deco {
+  position: absolute;
+  inset: -16px;
+  border-radius: 44px;
+  background: linear-gradient(135deg, var(--purple-light), var(--pink-light));
+  z-index: 1;
+  transform: rotate(2deg);
+}
+.hiba-text .role  { color: var(--pink); font-size: 15px; font-weight: 600; margin-bottom: 20px; }
+.hiba-text p      { color: var(--gray-700); margin-bottom: 14px; }
+.hiba-tags        { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.hiba-tag         {
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--white);
+  border: 1px solid var(--gray-200, #E5E7EB);
+  border-radius: var(--radius-full);
+  color: var(--gray-700);
+}
+
+/* ─── EXPERIENCE ─────────────────────────────── */
+#experience { background: var(--white); }
+.exp-text { max-width: 680px; margin: 0 auto; text-align: center; color: var(--gray-700); }
+
+/* ─── NOT TASKS ──────────────────────────────── */
+#not-tasks { background: var(--gray-50); border-top: 1px solid var(--gray-100); }
+.tasks-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.tasks-text p { color: var(--gray-700); margin-bottom: 14px; }
+.img-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.mosaic-img {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--gray-100);
+}
+.mosaic-img img { width:100%; height:100%; object-fit:cover; display:block; transition: transform .4s ease; }
+.mosaic-img:hover img { transform: scale(1.05); }
+.mosaic-tall { grid-row: span 2; }
+.mosaic-img-1 { aspect-ratio: 1; }
+.mosaic-img-2 { aspect-ratio: 1; }
+.mosaic-img-3 { aspect-ratio: 1; }
+
+/* ─── TESTIMONIALS ───────────────────────────── */
+#testimonials { background: var(--white); }
+.test-header-img {
+  width: 100%;
+  max-width: 440px;
+  border-radius: var(--radius-lg);
+  margin: 0 auto 56px;
+  display: block;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100);
+}
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.test-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow .2s, transform .2s;
+}
+.test-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.stars { color: #F59E0B; font-size: 13px; }
+.test-body { font-size: 15px; color: var(--gray-700); line-height: 1.7; flex: 1; }
+.test-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--gray-100);
+}
+.test-avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--purple-mid);
+}
+.test-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.test-name { font-size: 14px; font-weight: 700; color: var(--black); }
+.test-role { font-size: 12px; color: var(--pink); font-weight: 500; margin-top: 2px; }
+
+/* ─── FOOTER ─────────────────────────────────── */
+footer {
+  background: var(--gray-900);
+  color: var(--white);
+  padding: 56px 24px;
+  text-align: center;
+}
+footer img { height: 52px; margin: 0 auto 24px; opacity: .85; }
+footer p   { font-size: 13px; color: rgba(255,255,255,.4); margin-bottom: 8px; }
+footer a   { color: rgba(255,255,255,.4); text-decoration: none; margin: 0 8px; transition: color .2s; }
+footer a:hover { color: var(--white); }
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-layout       { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+  .hero-img-wrap     { max-width: 340px; margin: 0 auto; }
+  .hero-ctas         { justify-content: center; }
+  .hero-sub          { margin: 0 auto 36px; }
+  .intro-layout      { grid-template-columns: 1fr; text-align: center; }
+  .intro-icon-box    { margin: 0 auto 24px; }
+  .about-layout      { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .logo-img          { margin: 0 auto; }
+  .hiba-layout       { grid-template-columns: 1fr; }
+  .hiba-img-wrap     { max-width: 320px; margin: 0 auto; }
+  .tasks-layout      { grid-template-columns: 1fr; }
+  .img-mosaic        { order: -1; }
+  .struct-grid       { grid-template-columns: repeat(2, 1fr); }
+  .who-grid          { grid-template-columns: repeat(2, 1fr); }
+  .test-grid         { grid-template-columns: 1fr; }
+  .stats-row         { flex-wrap: wrap; }
+  .stat-item         { flex: 0 0 50%; border-left: none; padding: 12px 0; border-bottom: 1px solid var(--gray-200, #E5E7EB); }
+  section            { padding: 64px 0; }
+  .form-card         { padding: 36px 24px; }
+  .form-row          { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 540px) {
+  .struct-grid  { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .who-grid     { grid-template-columns: 1fr; }
+  .btn-xl       { padding: 18px 40px; font-size: 17px; }
+  .test-grid    { grid-template-columns: 1fr; }
+  .img-mosaic   { grid-template-columns: 1fr; }
+  .mosaic-tall  { grid-row: auto; }
+}
+
+/* ─── VIDEO TESTIMONIALS ─────────────────────── */
+.vtest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 360px));
+  gap: 28px;
+  justify-content: center;
+}
+.vtest-card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow .25s, transform .25s;
+}
+.vtest-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+.vtest-video-wrap {
+  position: relative;
+  padding-bottom: 177.78%; /* 9:16 portrait — Instagram/Reels */
+  background: var(--black);
+}
+.vtest-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vtest-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (max-width: 700px) {
+  .vtest-grid { grid-template-columns: minmax(0, 360px); }
+}
+
+
+/* ─── SCROLLBAR ──────────────────────────────── */
+::-webkit-scrollbar              { width: 5px; }
+::-webkit-scrollbar-track        { background: var(--gray-100); }
+::-webkit-scrollbar-thumb        { background: var(--purple-mid); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover  { background: var(--purple); }
+
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ══════════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png" alt="هبة الحلبي">
+    </div>
+    <a href="#register-1" class="btn btn-primary">سجّل الآن</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-layout">
+
+      <!-- Text -->
+      <div>
+        <div class="hero-eyebrow">✦ الدفعة الثانية · يبدأ 23 سبتمبر 2026</div>
+        <h1 class="t-display hero-title">
+          برنامج<br><span class="grad">THE CHANGE</span>
+        </h1>
+        <p class="t-body-lg text-gray hero-sub">
+          12 لقاءً مكثفاً مع هبة حلبي،<br>لبناء نظام عمل حقيقي يغيّر طريقة إدارة مصلحتك ويخلق مسار نمو أوضح.
+        </p>
+        <div class="hero-ctas">
+          <a href="#register-1" class="btn btn-primary btn-lg">احجز مكانك الآن</a>
+          <a href="#video" class="btn btn-outline">شاهد الفيديو</a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-img-wrap">
+        <div class="hero-img-deco"></div>
+        <img src="https://content.vp4.me/info_wewin-consulting_com/Content/222_687x1016-r.png" alt="هبة الحلبي">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="hero-stats">
+    <div class="stats-row">
+      <div class="stat-item reveal d1">
+        <div class="stat-num">12</div>
+        <div class="stat-desc">لقاءً مكثفاً</div>
+      </div>
+      <div class="stat-item reveal d2">
+        <div class="stat-num">3<span style="font-size:18px;font-weight:500"> ساعات</span></div>
+        <div class="stat-desc">10:00 – 13:00</div>
+      </div>
+      <div class="stat-item reveal d3">
+        <div class="stat-num">كل أربعاء</div>
+        <div class="stat-desc">جدول ثابت أسبوعياً</div>
+      </div>
+      <div class="stat-item reveal d4">
+        <div class="stat-num">مجموعة صغيرة</div>
+        <div class="stat-desc">أماكن محدودة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INTRO ════════════════════════════════════════ -->
+<section id="intro">
+  <div class="container">
+    <div class="intro-layout">
+      <div class="reveal d1">
+        <div class="intro-icon-box">
+          <img src="https://content.vp4.me/info_wewin-consulting_com/Content/artificial-intelligence_653514_512x512-r%20(1).png" alt="">
+        </div>
+      </div>
+      <div class="reveal d2">
+        <div class="badge" style="margin-bottom:18px">البرنامج</div>
+        <h2 class="t-h2" style="margin-bottom:20px">
+          هل أنت جاهز لتغيير طريقة <span class="grad">إدارة مصلحتك؟</span>
+        </h2>
+        <p class="t-body text-gray">
+          مرحباً في THE CHANGE — البرنامج الذي صمّمته هبة حلبي لأصحاب المصالح اللي وصلوا لمرحلة فهموا فيها، إنه الجهد لحاله ما بكفي.
+        </p>
+        <p class="t-body text-gray">
+          مسار عملي عميق لبناء نظام عمل أوضح، ستخرج منه بأدوات حقيقية تغيّر طريقة إدارة مصلحتك.
+        </p>
+        <p class="t-body text-gray">
+          قرارات أذكى، رؤية أوضح، وطريقة إدارة تساعدك تكبر بشكل حقيقي.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VIDEO ════════════════════════════════════════ -->
+<section id="video">
+  <div class="container">
+    <div class="sec-header reveal">
+      <div class="badge" style="margin-bottom:16px">شاهد</div>
+      <h2 class="t-h2">تعرّف على البرنامج</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="video-wrap reveal d2">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/XZ_jsmiYXjE?rel=0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT PROGRAM ════════════════════════════════ -->
+<section id="about-program">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-text reveal">
+        <div class="badge" style="margin-bottom:18px">المنهجية</div>
+        <h2 class="t-h2" style="margin-bottom:20px">
+          نظام <span class="grad">WIN SYSTEM</span>
+        </h2>
+        <p class="t-body text-gray">
+          منهجية حصرية طوّرتها هبة حلبي على مدى سنوات من العمل مع أصحاب مصالح ومرافقة مئات المشاريع. نظام متكامل يجمع بين: التفكير، الإدارة، التسويق، والتكنولوجيا.
+        </p>
+        <p class="t-body text-gray">
+          كل عنصر في المنهجية يقود لتغيير حقيقي بطريقة إدارة المصلحة، لاتخاذ قرارات أوضح، وبناء نظام يخلق نمو وأرباح بشكل مستقر.
+        </p>
+        <a href="#register-1" class="btn btn-primary" style="margin-top:8px">اشترك في البرنامج</a>
+      </div>
+      <div class="reveal d2" style="text-align:center">
+        <img class="logo-img" src="https://content.vp4.me/info_wewin-consulting_com/Content/WIN%20SYSTEM%20LOGO_900x187-r%20(1).png" alt="WIN SYSTEM">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORM 1 ════════════════════════════════════════ -->
+<div class="form-wrapper" id="register-1">
+  <div class="container">
+    <div class="form-card reveal-scale">
+      <div class="badge" style="margin-bottom:16px">التسجيل</div>
+      <h2 class="t-h2" style="margin-bottom:8px">سجّل الآن — <span class="grad">الأماكن محدودة</span></h2>
+      <p class="sub">أدخل بياناتك وسيتواصل معك فريقنا في أقرب وقت</p>
+
+      <form method="post" action="./ic13" id="form1">
+        <div class="form-row">
+          <input class="field" type="text"
+            name="uf__c46acf62627647a093b816ab23997b18_first_name_475441"
+            placeholder="الاسم الأول" required>
+          <input class="field" type="text"
+            name="uf__c46acf62627647a093b816ab23997b18_last_name_475440"
+            placeholder="الاسم الأخير" required>
+        </div>
+        <div class="form-row">
+          <input class="field" type="email"
+            name="uf__c46acf62627647a093b816ab23997b18_email_475438"
+            placeholder="البريد الإلكتروني" required>
+          <input class="field" type="tel"
+            name="uf__c46acf62627647a093b816ab23997b18_mobile_475439"
+            placeholder="رقم الهاتف" required>
+        </div>
+        <div class="terms-line">
+          <input type="checkbox"
+            name="uf_confirmation_c46acf62627647a093b816ab23997b18"
+            value="yes" id="t1" checked>
+          <label for="t1">أوافق على <a href="#">سياسة الخصوصية</a> و<a href="#">شروط الخدمة</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-xl" style="width:100%">أريد التسجيل</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ THE CHANGE ══════════════════════════════════ -->
+<section id="the-change">
+  <div class="container">
+    <div class="sec-header reveal">
+      <div class="badge" style="margin-bottom:16px">لماذا</div>
+      <h2 class="t-h2">لماذا <span class="grad">THE CHANGE</span>؟</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="change-text reveal d2">
+      <p class="t-body-lg text-gray">
+        لأن معظم الناس يعرفون ماذا يريدون، لكنهم لا يعرفون كيف يصلون إليه. لأن القرارات الصعبة تحتاج وضوحاً، والوضوح يحتاج أدوات حقيقية.
+      </p>
+      <p class="t-body text-gray" style="margin-top:14px">
+        THE CHANGE ليس برنامج تحفيز مؤقت — بل تحوّل عميق يبدأ من الداخل. ستكتشف من أنت حقاً، ما الذي يمنعك، وكيف تنطلق نحو الحياة التي تستحقها.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOR WHO ══════════════════════════════════════ -->
+<section id="for-who">
+  <div class="container">
+    <div class="sec-header reveal">
+      <div class="badge" style="margin-bottom:16px">المشتركون</div>
+      <h2 class="t-h2">لمن هذا البرنامج؟</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="who-grid">
+      <div class="who-card reveal d1">
+        <div class="who-icon">🌱</div>
+        <p>من يشعر أنه عالق بعمله ويريد الخروج من المرحلة الحالية</p>
+      </div>
+      <div class="who-card reveal d2">
+        <div class="who-icon">🎯</div>
+        <p>من يسعى لتطوير مصلحته لكنه لا يعرف من أين يبدأ</p>
+      </div>
+      <div class="who-card reveal d3">
+        <div class="who-icon">💪</div>
+        <p>من يريد اتخاذ قرارات أوضح وإدارة مصلحته بثقة أكبر</p>
+      </div>
+      <div class="who-card reveal d4">
+        <div class="who-icon">🔄</div>
+        <p>من جرّب كثيراً لكنه ما زال يبحث عن طريقة إدارة أوضح وأكثر فعالية</p>
+      </div>
+      <div class="who-card reveal d5">
+        <div class="who-icon">✨</div>
+        <p>من يؤمن أن مصلحته قادرة على النمو بشكل أكبر وأكثر استقراراً</p>
+      </div>
+      <div class="who-card reveal d6">
+        <div class="who-icon">🚀</div>
+        <p>من يريد تغييراً حقيقياً بطريقة إدارة مصلحته ونموّها</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STRUCTURE ════════════════════════════════════ -->
+<section id="structure">
+  <div class="container">
+    <div class="sec-header reveal">
+      <div class="badge" style="margin-bottom:16px">التفاصيل</div>
+      <h2 class="t-h2">هيكل البرنامج</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="struct-grid">
+      <div class="struct-card reveal d1">
+        <span class="struct-icon">📚</span>
+        <div class="struct-num">12</div>
+        <div class="struct-label">لقاءً مكثفاً</div>
+      </div>
+      <div class="struct-card reveal d2">
+        <span class="struct-icon">⏱️</span>
+        <div class="struct-num">3</div>
+        <div class="struct-label">ساعات لكل لقاء · 10:00 – 13:00</div>
+      </div>
+      <div class="struct-card reveal d3">
+        <span class="struct-icon">📅</span>
+        <div class="struct-num" style="font-size:22px">أيام الأربعاء</div>
+        <div class="struct-label">جدول أسبوعي ثابت</div>
+      </div>
+      <div class="struct-card reveal d4">
+        <span class="struct-icon">🗓️</span>
+        <div class="struct-num" style="font-size:22px">23/09/2026</div>
+        <div class="struct-label">موعد البداية</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT HIBA ════════════════════════════════════ -->
+<section id="about-hiba">
+  <div class="container">
+    <div class="hiba-layout">
+      <div class="hiba-img-wrap reveal">
+        <div class="hiba-img-deco"></div>
+        <img src="https://content.vp4.me/info_wewin-consulting_com/Content/0001_900x916-r%20(2).jpg" alt="هبة الحلبي">
+      </div>
+      <div class="hiba-text reveal d2">
+        <div class="badge" style="margin-bottom:16px">المدرّبة</div>
+        <h2 class="t-h2" style="margin-bottom:6px">هبة <span class="grad">حلبي</span></h2>
+        <p class="role">مهندسة صناعة وإدارة، مستشارة في الإدارة وبناء أنظمة العمل</p>
+        <p class="t-body text-gray">
+          مدرّبة دولية مع خبرة تمتد لأكثر من 10 سنوات في مرافقة أصحاب مصالح، شركات ومؤسسات.
+        </p>
+        <p class="t-body text-gray">
+          أسّست نظام WIN SYSTEM بعد سنوات من التطبيق العملي ومرافقة مئات المشاريع.
+        </p>
+        <p class="t-body text-gray">
+          تؤمن هبة أن النجاح الحقيقي لا يعتمد على الاجتهاد العشوائي والعمل لساعات طويلة، بل على بناء مصلحة تُدار كنظام واضح — باتخاذ قرارات أذكى، بناء آليات ربح واضحة، وتطوير مصالح أكثر استقراراً وربحية.
+        </p>
+        <p class="t-body" style="font-weight:700;color:var(--purple)">WORKING SMART, NOT HARD</p>
+        <div class="hiba-tags">
+          <span class="hiba-tag">مهندسة صناعة وإدارة</span>
+          <span class="hiba-tag">🏆 مدرّبة معتمدة دولياً</span>
+          <span class="hiba-tag">📖 10+ سنوات خبرة</span>
+          <span class="hiba-tag">👥 مئات المشتركين</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ════════════════════════════════════ -->
+<section id="experience">
+  <div class="container">
+    <div class="sec-header reveal">
+      <div class="badge" style="margin-bottom:16px">التجربة</div>
+      <h2 class="t-h2">ماذا ستحصل؟</h2>
+      <div class="divider"></div>
+    </div>
+    <p class="exp-text t-body-lg text-gray reveal d2">
+      في THE CHANGE لن تحصل على محاضرات نظرية — بل ستحصل على تجربة تحوّل حقيقية. كل لقاء مُصمَّم بعناية ليمنحك أدوات عمليّة تطبّقها فوراً وتشعر بالفرق من اللقاء الأول.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ NOT TASKS ════════════════════════════════════ -->
+<section id="not-tasks">
+  <div class="container">
+    <div class="tasks-layout">
+      <div class="tasks-text reveal">
+        <div class="badge" style="margin-bottom:18px">التغيير الحقيقي</div>
+        <h2 class="t-h2" style="margin-bottom:20px">
+          هذا هو التغيير الحقيقي<br>الذي نصنعه في<br><span class="grad">THE CHANGE</span>
+        </h2>
+        <p class="t-body text-gray">
+          لا مزيد من النصائح، لا مزيد من الأدوات، لا حيل تسويقية. بل تغيير عميق واحد: بناء نظام لعملكم يصنع المال.
+        </p>
+        <p class="t-body text-gray">
+          خلال 3 أشهر فقط يبدأ التغيير الذي ينتظره أصحاب المصالح: استقرار، سيطرة، وتحسّن حقيقي في الأرباح.
+        </p>
+        <a href="#register-2" class="btn btn-primary" style="margin-top:8px">ابدأ تحوّلك</a>
+      </div>
+      <div class="img-mosaic reveal d2">
+        <div class="mosaic-img mosaic-tall">
+          <img src="https://content.vp4.me/info_wewin-consulting_com/Content/1313_900x1179-r.jpg" alt="">
+        </div>
+        <div class="mosaic-img mosaic-img-2">
+          <img src="https://content.vp4.me/info_wewin-consulting_com/Content/ICON_346x266-r.png" alt="" style="object-fit:contain; padding:16px; background:#f3e8ff;">
+        </div>
+        <div class="mosaic-img mosaic-img-3">
+          <img src="https://content.vp4.me/info_wewin-consulting_com/Content/refine_172118521_512x512-r%20(1).png" alt="" style="object-fit:contain; padding:16px; background:#fce7f3;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ══════════════════════════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="sec-header reveal">
+      <div class="badge" style="margin-bottom:16px">شهادات</div>
+      <h2 class="t-h2">آراء أصحاب المصالح حول البرنامج</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal d1">
+        <div class="stars">★★★★★</div>
+        <p class="test-body">شاركتُ في منتدى سيدات الأعمال بإشراف هبة، وكانت تجربة قيّمة أثرت عليّ بشكل كبير. مررنا بمسار عميق واكتسبنا أدوات مهمة لإدارة المصلحة. لاحقًا، انتقلت إلى مرافقة فردية أدّت إلى تحسّن كبير في النتائج، بل وإلى مضاعفتها.</p>
+        <div class="test-footer">
+          <div class="test-avatar">
+            <img src="https://content.vp4.me/info_wewin-consulting_com/Content/2.png" alt="نادين قسوم">
+          </div>
+          <div>
+            <div class="test-name">نادين قسوم</div>
+            <div class="test-role">المديرة العامة لشركة LAND للاستشارات</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal d2">
+        <div class="stars">★★★★★</div>
+        <p class="test-body">أوصي بهبة بشدّة كمستشارة أعمال. اللقاءات معها دقيقة وعملية للغاية. تعرف كيف تطرح الأسئلة الصحيحة وتحوّلها إلى خطط عمل واضحة. وخلال أقل من ستة أشهر، لاحظنا قفزة كبيرة في تطوّر المصلحة، في النتائج وفي الربحية.</p>
+        <div class="test-footer">
+          <div class="test-avatar">
+            <img src="https://content.vp4.me/info_wewin-consulting_com/Content/3.png" alt="كارم عامر">
+          </div>
+          <div>
+            <div class="test-name">كارم عامر</div>
+            <div class="test-role">المدير العام لشركة 4Lands لتصميم المناظر الطبيعية</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal d3">
+        <div class="stars">★★★★★</div>
+        <p class="test-body">ساعدني البرنامج على ترتيب المصلحة بشكل فعلي من حيث التسعير وإدارة التدفق النقدي. كما تعلّمت استخدام أدوات رقمية وأنظمة عمل. ارتفعت إيرادات المصلحة إلى ثلاثة أضعاف، وتحسّنت النتائج بشكل واضح وملموس.</p>
+        <div class="test-footer">
+          <div class="test-avatar">
+            <img src="https://content.vp4.me/info_wewin-consulting_com/Content/5.png" alt="سندس حمدان">
+          </div>
+          <div>
+            <div class="test-name">سندس حمدان</div>
+            <div class="test-role">مالكة SONDOS للهندسة المعمارية</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal d4">
+        <div class="stars">★★★★★</div>
+        <p class="test-body">دخلتُ إلى البرنامج مع الكثير من التساؤلات وغياب في الاتجاه، وخرجتُ منه بوضوح كامل، خطة عمل واضحة وثقة متجددة في طريقي المهني. الأدوات التي حصلت عليها ساعدتني على تحسين النتائج وتحقيق نمو ملموس في أداء المصلحة.</p>
+        <div class="test-footer">
+          <div class="test-avatar">
+            <img src="https://content.vp4.me/info_wewin-consulting_com/Content/%d7%96%d7%90%d7%94%d7%99.png" alt="زاهي بشارات">
+          </div>
+          <div>
+            <div class="test-name">زاهي بشارات</div>
+            <div class="test-role">المدير العام لشركة We Believe</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal d5">
+        <div class="stars">★★★★★</div>
+        <p class="test-body">كانت تجربتي مع هبة مسارًا استراتيجيًا عميقًا بدأ من فكرة المشروع واستمر حتى مرحلة التأسيس والإدارة الفعلية. عملنا معًا على بناء استراتيجية واضحة وهيكل إداري منظم. نمت المصلحة بشكل ملحوظ، وارتفعت الإيرادات إلى مستويات فاقت توقعاتي.</p>
+        <div class="test-footer">
+          <div class="test-avatar">
+            <img src="https://content.vp4.me/info_wewin-consulting_com/Content/%d7%9e%d7%93%d7%99%d7%94%2054%20(1080%20x%201080%20%d7%a4%d7%99%d7%a7%d7%a1%d7%9c).png" alt="سامر حمود">
+          </div>
+          <div>
+            <div class="test-name">سامر حمود</div>
+            <div class="test-role">مالك Sahara Luxury Resort</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal d6">
+        <div class="stars">★★★★★</div>
+        <p class="test-body">حصلتُ على مرافقة مالية وإدارية على أعلى مستوى. شمل المسار تحليلاً عميقًا للأرقام، التدفق النقدي، التسعير وبناء هيكل مالي سليم. وخلال بضعة أشهر تضاعفت الربحية بشكل واضح وتحسّنت النتائج بشكل ملحوظ.</p>
+        <div class="test-footer">
+          <div class="test-avatar" style="background:linear-gradient(135deg,var(--purple),var(--pink));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:white;border:none;">س</div>
+          <div>
+            <div class="test-name">سلمان أبو ريش</div>
+            <div class="test-role">مالك شركة دانيال للاتصالات</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal d1">
+        <div class="stars">★★★★★</div>
+        <p class="test-body">شاركتُ في برنامج لإدارة المصلحة وحصلتُ على أدوات عملية للإدارة المالية، التسويقية والتشغيلية. قمنا ببناء خطة عمل واضحة وطبّقنا أنظمة تساعد على الإدارة بشكل أذكى. وخلال أقل من شهرين تضاعفت النتائج وتحسّن الأداء بشكل ملحوظ.</p>
+        <div class="test-footer">
+          <div class="test-avatar" style="background:linear-gradient(135deg,var(--purple),var(--pink));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:white;border:none;">ص</div>
+          <div>
+            <div class="test-name">صفاء دبّور</div>
+            <div class="test-role">مالكة Beauty &amp; Therapy</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal d2">
+        <div class="stars">★★★★★</div>
+        <p class="test-body">ساعدني البرنامج على توضيح الرؤية وتحديد أهدافي بدقة وزيادة الأرباح. حصلتُ على أدوات استراتيجية وفهم أعمق للجمهور المستهدف في العالم الرقمي. هذا البرنامج ساهم بشكل واضح في نمو المصلحة وتحسّن النتائج.</p>
+        <div class="test-footer">
+          <div class="test-avatar" style="background:linear-gradient(135deg,var(--purple),var(--pink));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:white;border:none;">ن</div>
+          <div>
+            <div class="test-name">نرمين خلايلة</div>
+            <div class="test-role">مرافِقة روحية</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VIDEO TESTIMONIALS ═══════════════════════════ -->
+<section id="video-testimonials" style="background:var(--gray-50);border-top:1px solid var(--gray-100);">
+  <div class="container">
+    <div class="sec-header reveal">
+      <div class="badge" style="margin-bottom:16px">بالفيديو</div>
+      <h2 class="t-h2">يحكوا بنفسهم</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="vtest-grid">
+
+      <!-- Video 1 — حمودي ملا -->
+      <div class="vtest-card reveal d1">
+        <div class="vtest-video-wrap">
+          <iframe src="https://iframe.mediadelivery.net/embed/181041/0257c7dc-cead-4ff0-ba18-ad72eef509c8?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+            loading="lazy"
+            style="border:0;position:absolute;top:0;height:100%;width:100%;"
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+            allowfullscreen="true"></iframe>
+        </div>
+        <div class="vtest-info">
+          <div class="stars">★★★★★</div>
+          <p class="test-body">"أكيد بنصح كل حد اليوم ياخد خطة عمل. اشتغلنا مع هبة على كل إشي بالمصلحة... أكيد ما كنتش بكون بهاي المرحلة."</p>
+          <div class="test-footer">
+            <div class="test-avatar" style="background:linear-gradient(135deg,var(--purple),var(--pink));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:white;">ح</div>
+            <div>
+              <div class="test-name">حمودي ملا</div>
+              <div class="test-role">صاحب مصلحة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 — سولومون أبو ريش -->
+      <div class="vtest-card reveal d2">
+        <div class="vtest-video-wrap">
+          <iframe src="https://iframe.mediadelivery.net/embed/181041/112994cc-9a87-42f0-8ed1-98a09479fcfa?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+            loading="lazy"
+            style="border:0;position:absolute;top:0;height:100%;width:100%;"
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+            allowfullscreen="true"></iframe>
+        </div>
+        <div class="vtest-info">
+          <div class="stars">★★★★★</div>
+          <p class="test-body">"تغيّر لنهج ثاني، طاقات معنوية أحسن، كله منظم وماشي حسب خطة ومرافقة. بنصح كل واحد عنده مصلحة وحابب يطورها يتوجه لهبة."</p>
+          <div class="test-footer">
+            <div class="test-avatar" style="background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:white;">س</div>
+            <div>
+              <div class="test-name">سولومون أبو ريش</div>
+              <div class="test-role">صاحب مصلحة — 10 سنوات خبرة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORM 2 ════════════════════════════════════════ -->
+<div class="form-wrapper" id="register-2">
+  <div class="container">
+    <div class="form-card reveal-scale">
+      <div class="badge" style="margin-bottom:16px">التسجيل</div>
+      <h2 class="t-h2" style="margin-bottom:8px">لا تؤجّل — <span class="grad">الأماكن قد تمتلئ قريباً</span></h2>
+      <p class="sub">سجّل الآن وابدأ رحلة تحوّلك الحقيقية</p>
+
+      <form method="post" action="./ic13" id="form2">
+        <div class="form-row">
+          <input class="field" type="text"
+            name="uf__c46acf62627647a093b816ab23997b18_first_name_475441"
+            placeholder="الاسم الأول" required>
+          <input class="field" type="text"
+            name="uf__c46acf62627647a093b816ab23997b18_last_name_475440"
+            placeholder="الاسم الأخير" required>
+        </div>
+        <div class="form-row">
+          <input class="field" type="email"
+            name="uf__c46acf62627647a093b816ab23997b18_email_475438"
+            placeholder="البريד الإلكتروني" required>
+          <input class="field" type="tel"
+            name="uf__c46acf62627647a093b816ab23997b18_mobile_475439"
+            placeholder="رقم الهاتف" required>
+        </div>
+        <div class="terms-line">
+          <input type="checkbox"
+            name="uf_confirmation_c46acf62627647a093b816ab23997b18"
+            value="yes" id="t2" checked>
+          <label for="t2">أوافق على <a href="#">سياسة الخصوصية</a> و<a href="#">شروط الخدمة</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-xl" style="width:100%">أريد التسجيل في THE CHANGE</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
+<footer>
+  <img src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png" alt="هبة الحلبي">
+  <p>© 2026 هبة الحلبي — جميع الحقوق محفوظة</p>
+  <p>
+    <a href="#">سياسة الخصوصية</a>
+    <a href="#">شروط الخدمة</a>
+    <a href="#">تواصل معنا</a>
+  </p>
+</footer>
+
+<!-- ═══ JS ════════════════════════════════════════════ -->
+<script>
+  // Navbar on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+  document.querySelectorAll('.reveal, .reveal-scale').forEach(el => io.observe(el));
+
+
+  // Smooth anchor
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  // Form submit → send data in background, redirect immediately
+  const WEBHOOK_URL = 'https://hook.eu2.make.com/nixhajuzlsmx7nzka5bs5kok94y5t8et';
+
+  ['form1', 'form2'].forEach(id => {
+    const form = document.getElementById(id);
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = '...جارٍ الإرسال';
+
+      const fd = new FormData(form);
+      const payload = {
+        first_name: fd.get('uf__c46acf62627647a093b816ab23997b18_first_name_475441'),
+        last_name:  fd.get('uf__c46acf62627647a093b816ab23997b18_last_name_475440'),
+        email:      fd.get('uf__c46acf62627647a093b816ab23997b18_email_475438'),
+        phone:      fd.get('uf__c46acf62627647a093b816ab23997b18_mobile_475439'),
+        form_id:    id,
+        source:     window.location.href
+      };
+
+      // Send to Make webhook — keepalive survives page navigation + supports JSON
+      fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(() => {});
+
+      // Fire-and-forget to original action
+      navigator.sendBeacon(form.action, fd);
+
+      window.location.href = 'thank-you.html';
+    });
+  });
+</script>
+</body>
+</html>

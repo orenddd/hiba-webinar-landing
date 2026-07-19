@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انضم للبث المباشر – WHAT IS THE CHANGE مع هبة حلبي</title>
+    <meta property="og:title" content="انضم للبث المباشر – WHAT IS THE CHANGE">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://content.vp4.me/info_wewin-consulting_com/Content/designer-working-from-her-home_900x656-r.jpg">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '291370482973620');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=291370482973620&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pink:        #f9226c;
+            --purple:      #9f21cf;
+            --pink-purple: #bb2eb6;
+            --light-pink:  #f1307b;
+            --dark:        #0a0a14;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            direction: rtl;
+            min-height: 100vh;
+            background: radial-gradient(ellipse at 20% 90%, rgba(159,33,207,.4) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 10%, rgba(249,34,108,.35) 0%, transparent 55%),
+                        linear-gradient(160deg, #12002a 0%, #0a0a14 50%, #1e0020 100%);
+            color: white;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px 60px;
+        }
+
+        /* mesh grid overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* floating orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .orb-a {
+            width: 480px; height: 480px;
+            background: rgba(159,33,207,.22);
+            top: -100px; right: -80px;
+            animation: floatY 8s ease-in-out infinite;
+        }
+        .orb-b {
+            width: 360px; height: 360px;
+            background: rgba(249,34,108,.18);
+            bottom: -80px; left: -60px;
+            animation: floatY 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-22px); }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes gradientShift {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 22px rgba(249,34,108,.45); }
+            50%       { box-shadow: 0 0 55px rgba(249,34,108,.85), 0 0 110px rgba(159,33,207,.4); }
+        }
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: .6; transform: scale(.85); }
+        }
+
+        .page {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 520px;
+            text-align: center;
+        }
+
+        /* ── LOGO ── */
+        .logo {
+            margin-bottom: 28px;
+            animation: fadeUp .7s ease .05s both;
+        }
+        .logo img {
+            height: 52px;
+            object-fit: contain;
+        }
+
+        /* ── LIVE BADGE ── */
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(249,34,108,.18);
+            border: 1px solid rgba(249,34,108,.5);
+            color: #ff7aaa;
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+            backdrop-filter: blur(12px);
+            animation: fadeUp .7s ease .1s both;
+        }
+        .live-dot {
+            width: 8px; height: 8px;
+            background: var(--pink);
+            border-radius: 50%;
+            animation: livePulse 1.4s ease-in-out infinite;
+        }
+
+        /* ── TITLE ── */
+        .webinar-title {
+            font-family: 'Assistant', sans-serif;
+            font-size: clamp(38px, 9vw, 72px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 50%, var(--pink) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s linear infinite, fadeUp .7s ease .15s both;
+            margin-bottom: 10px;
+        }
+
+        .webinar-with {
+            font-size: clamp(16px, 3vw, 22px);
+            font-weight: 600;
+            color: rgba(255,255,255,.85);
+            animation: fadeUp .7s ease .22s both;
+            margin-bottom: 24px;
+        }
+
+        /* ── DATE PILL ── */
+        .date-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.15);
+            backdrop-filter: blur(16px);
+            border-radius: 14px;
+            padding: 12px 24px;
+            margin-bottom: 32px;
+            animation: fadeUp .7s ease .3s both;
+        }
+        .date-pill .cal {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            border-radius: 9px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 17px;
+            flex-shrink: 0;
+        }
+        .date-pill span {
+            font-size: clamp(14px, 2.5vw, 18px);
+            font-weight: 700;
+            color: white;
+        }
+
+        /* ── FORM CARD ── */
+        .form-card {
+            background: rgba(255,255,255,.1);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 24px;
+            padding: 36px 32px;
+            animation: fadeUp .7s ease .38s both;
+        }
+
+        .form-headline {
+            font-size: clamp(18px, 4vw, 24px);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 6px;
+        }
+        .form-sub {
+            font-size: 14px;
+            color: rgba(255,255,255,.65);
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        .f-field {
+            margin-bottom: 14px;
+            text-align: right;
+        }
+        .f-field label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255,255,255,.75);
+            margin-bottom: 7px;
+        }
+        .f-field input {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,.18);
+            background: rgba(255,255,255,.92);
+            font-size: 16px;
+            font-family: 'Rubik', sans-serif;
+            color: #222;
+            direction: rtl;
+            transition: border-color .25s, box-shadow .25s;
+        }
+        .f-field input:focus {
+            outline: none;
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px rgba(249,34,108,.2);
+        }
+        .f-field input::placeholder { color: #aaa; }
+
+        .consent-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 22px;
+            text-align: right;
+        }
+        .consent-row input[type="checkbox"] {
+            width: 18px; height: 18px;
+            flex-shrink: 0;
+            margin-top: 3px;
+            accent-color: var(--pink);
+            cursor: pointer;
+        }
+        .consent-row label {
+            font-size: 12px;
+            color: rgba(255,255,255,.65);
+            line-height: 1.55;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            color: white;
+            font-size: 18px;
+            font-weight: 800;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            font-family: 'Rubik', sans-serif;
+            letter-spacing: .3px;
+            transition: transform .25s, box-shadow .25s, opacity .25s;
+            animation: pulseGlow 2.5s ease-in-out infinite;
+        }
+        .btn-submit:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 60px rgba(249,34,108,.55);
+        }
+        .btn-submit:disabled {
+            opacity: .75;
+            cursor: default;
+            animation: none;
+        }
+
+        /* spinner inside button */
+        .spinner {
+            display: none;
+            width: 20px; height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin .8s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .loading .btn-text { display: none; }
+        .loading .spinner   { display: block; }
+
+        /* ── FOOTER ── */
+        .footer-note {
+            margin-top: 28px;
+            font-size: 12px;
+            color: rgba(255,255,255,.35);
+            animation: fadeUp .7s ease .55s both;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 480px) {
+            .form-card { padding: 24px 18px; }
+            body { padding: 28px 16px 48px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="orb orb-a"></div>
+<div class="orb orb-b"></div>
+
+<div class="page">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png" alt="Hiba Logo">
+    </div>
+
+    <!-- Live badge -->
+    <div class="live-badge">
+        <span class="live-dot"></span>
+        البث المباشر
+    </div>
+
+    <!-- Title -->
+    <h1 class="webinar-title">WHAT IS THE CHANGE</h1>
+    <p class="webinar-with">مع هبة حلبي</p>
+
+    <!-- Date pill -->
+    <div class="date-pill">
+        <div class="cal">📅</div>
+        <span>10.06.26 &nbsp;|&nbsp; 10:00 – 11:30 صباحًا</span>
+    </div>
+
+    <!-- Form card -->
+    <div class="form-card">
+        <p class="form-headline">أدخل بياناتك للانضمام للبث</p>
+        <p class="form-sub">سيتم توجيهك مباشرةً إلى الويبينار الحي</p>
+
+        <form id="joinForm" onsubmit="joinLive(event)">
+            <div class="f-field">
+                <label for="fullName">الاسم الكامل <span style="color:var(--pink)">*</span></label>
+                <input type="text" id="fullName" name="full_name" placeholder="أدخل اسمك الكامل" required autocomplete="name">
+            </div>
+            <div class="f-field">
+                <label for="phone">رقم الهاتف المحمول <span style="color:var(--pink)">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="05X-XXXXXXX" required autocomplete="tel" inputmode="tel">
+            </div>
+
+            <div class="consent-row">
+                <input type="checkbox" id="consent" checked required>
+                <label for="consent">أوافق على تلقي مراسلات تسويقية عبر البريد الإلكتروني و/أو الرسائل النصية (SMS) و/أو تطبيق واتساب</label>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+                <span class="btn-text">انضم للبث الآن ←</span>
+                <div class="spinner"></div>
+            </button>
+        </form>
+    </div>
+
+    <p class="footer-note">
+        بعد إدخال بياناتك سيتم توجيهك تلقائيًا إلى غرفة Zoom
+    </p>
+
+</div>
+
+<script>
+    const ZOOM_URL = 'https://us06web.zoom.us/j/85140991634?pwd=Cz8QYkX3CbYbNRh8SJaPnassnnVUfa.1';
+    const WEBHOOK  = 'https://hook.eu2.make.com/2dsiu2xg5xlx31s11rnmmx2s8vef6v80';
+
+    function joinLive(e) {
+        e.preventDefault();
+
+        const btn  = document.getElementById('submitBtn');
+        const form = document.getElementById('joinForm');
+
+        btn.disabled = true;
+        btn.classList.add('loading');
+
+        const data = {
+            full_name: document.getElementById('fullName').value.trim(),
+            phone:     document.getElementById('phone').value.trim(),
+            source:    'webinar-join-live'
+        };
+
+        // Fire and forget – redirect regardless of webhook outcome
+        fetch(WEBHOOK, {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify(data)
+        }).finally(() => {
+            window.location.href = ZOOM_URL;
+        });
+
+        // Fallback: redirect after 4 seconds even if fetch hangs
+        setTimeout(() => { window.location.href = ZOOM_URL; }, 4000);
+    }
+</script>
+
+</body>
+</html>
