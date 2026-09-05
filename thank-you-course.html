@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تم استلام طلبك! — برنامج THE CHANGE مع هبة حلبي</title>
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '291370482973620');
+fbq('track', 'PageView');
+fbq('track', 'Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=291370482973620&ev=Lead&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110491147-3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-110491147-3');
+</script>
+
+<style>
+/* ─── BRAND TOKENS ───────────────────────────── */
+:root {
+  --pink:        #f9226c;
+  --purple:      #9f21cf;
+  --pink-purple: #bb2eb6;
+  --light-pink:  #f1307b;
+
+  --grad:        linear-gradient(135deg, #f9226c, #9f21cf);
+  --grad-wide:   linear-gradient(135deg, #f9226c, #bb2eb6, #9f21cf);
+
+  --white:    #ffffff;
+  --black:    #111111;
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-500: #6b7280;
+  --gray-900: #1a1a2e;
+
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   24px;
+  --radius-xl:   36px;
+  --radius-full: 999px;
+
+  --shadow-sm:    0 1px 3px rgba(0,0,0,.08);
+  --shadow-md:    0 4px 16px rgba(0,0,0,.10);
+  --shadow-lg:    0 12px 40px rgba(0,0,0,.12);
+  --shadow-brand: 0 8px 32px rgba(159,33,207,.22);
+}
+
+/* ─── RESET ──────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+img  { display:block; max-width:100%; }
+
+body {
+  font-family: 'Rubik', 'Assistant', Arial, sans-serif;
+  background: var(--white);
+  color: var(--gray-900);
+  direction: rtl;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── NAV ────────────────────────────────────── */
+.nav {
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-logo { height: 38px; }
+
+/* ─── HERO ───────────────────────────────────── */
+.hero {
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.52) 0%, rgba(0,0,0,.35) 100%),
+    url('https://content.vp4.me/info_wewin-consulting_com/Content/111166_1980x1320-r.jpg') center/cover no-repeat;
+  padding: 64px 24px 80px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  animation: fadeUp .7s ease both;
+}
+
+.hero-program {
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 900;
+  color: var(--pink);
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hero-tagline {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 40px;
+  opacity: .95;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.35);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-full);
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+.badge-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74,222,128,.35);
+  flex-shrink: 0;
+  animation: pulseDot 1.6s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%,100% { opacity:1; }
+  50%      { opacity:.4; }
+}
+
+.hero-title {
+  font-size: clamp(26px, 4vw, 46px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+.hero-sub {
+  font-size: clamp(16px, 2vw, 20px);
+  color: rgba(255,255,255,.88);
+  line-height: 1.75;
+}
+
+/* ─── SECTION BASE ───────────────────────────── */
+.section { padding: 64px 24px; }
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--black);
+}
+.section-sub {
+  font-size: 18px;
+  color: var(--gray-500);
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 44px;
+  font-weight: 600;
+}
+
+/* ─── STEPS ──────────────────────────────────── */
+.steps-section { background: var(--white); }
+.steps-grid {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.step-card {
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.step-card:hover {
+  border-color: #e9d5ff;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.step-icon { font-size: 54px; line-height: 1; margin-bottom: 16px; }
+.step-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--purple);
+  margin-bottom: 8px;
+}
+.step-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pink);
+  background: #fce7f3;
+  border-radius: var(--radius-full);
+  padding: 3px 12px;
+  margin-bottom: 14px;
+}
+.step-desc {
+  font-size: 16px;
+  color: var(--gray-500);
+  line-height: 1.75;
+  flex: 1;
+}
+
+/* ─── PROGRAM FACTS ──────────────────────────── */
+.facts-section {
+  background: linear-gradient(160deg, #f3e8ff 0%, var(--white) 55%, #fce7f3 100%);
+}
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.fact-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.fact-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: #e9d5ff;
+}
+.fact-icon { font-size: 40px; margin-bottom: 12px; }
+.fact-num {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--pink);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.fact-label {
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+/* ─── PREPARE ────────────────────────────────── */
+.prepare-section { background: var(--white); }
+.prepare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.prepare-card {
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.prepare-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: #e9d5ff;
+}
+.prepare-icon { font-size: 48px; margin-bottom: 14px; }
+.prepare-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--pink);
+  margin-bottom: 8px;
+}
+.prepare-card p {
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.65;
+}
+
+/* ─── SPEAKER ────────────────────────────────── */
+.speaker-section { padding: 0 24px 64px; }
+.speaker-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--grad-wide);
+  border-radius: var(--radius-xl);
+  padding: 52px 56px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  overflow: hidden;
+  position: relative;
+}
+.speaker-inner::before {
+  content: '';
+  position: absolute;
+  top: -50px; left: -50px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+}
+.speaker-inner::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+}
+.speaker-text { flex: 1; z-index: 1; }
+.speaker-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 10px;
+}
+.speaker-heading {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.speaker-name {
+  font-size: 17px;
+  color: rgba(255,255,255,.85);
+  line-height: 1.6;
+  font-weight: 400;
+}
+.speaker-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0,0,0,.28);
+}
+
+/* ─── FOOTER ─────────────────────────────────── */
+footer {
+  background: var(--gray-900);
+  padding: 40px 24px;
+  text-align: center;
+  margin-top: auto;
+}
+.footer-logo { height: 40px; margin: 0 auto 14px; opacity: .72; }
+footer p { font-size: 12px; color: rgba(255,255,255,.35); }
+
+/* ─── CONFETTI ───────────────────────────────── */
+.confetti-wrap {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+.cp {
+  position: absolute;
+  top: -14px;
+  animation: fall linear forwards;
+}
+@keyframes fall {
+  0%   { transform: translateY(0) rotate(0deg);      opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+/* ─── ANIMATIONS ─────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+.fade-up { animation: fadeUp .65s ease both; }
+.delay-1 { animation-delay: .12s; }
+.delay-2 { animation-delay: .22s; }
+.delay-3 { animation-delay: .32s; }
+.delay-4 { animation-delay: .42s; }
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 900px) {
+  .facts-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .prepare-grid { grid-template-columns: 1fr; }
+
+  .speaker-inner {
+    flex-direction: column-reverse;
+    padding: 36px 24px;
+    gap: 28px;
+    text-align: center;
+  }
+  .speaker-photo { width: 180px; height: 180px; }
+}
+@media (max-width: 480px) {
+  .hero      { padding: 44px 20px 60px; }
+  .section   { padding: 44px 20px; }
+  .step-card { padding: 32px 20px; }
+  .facts-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- CONFETTI -->
+<div class="confetti-wrap" id="confetti"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <img class="nav-logo"
+      src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png"
+      alt="هبة الحلبي">
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-program">THE CHANGE</div>
+    <div class="hero-tagline">التغيير الذي يصنع المال. نقطة.</div>
+
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      تم استلام بياناتك بنجاح
+    </div>
+
+    <h1 class="hero-title">شكراً لك! وصلنا طلب تسجيلك 🎉</h1>
+
+    <p class="hero-sub">
+      الخطوة الأولى نحو التغيير الذي يصنع المال قد تمّت.<br>
+      سيتواصل معك فريقنا خلال أيام العمل القريبة لاستكمال التسجيل<br>
+      والإجابة على كل أسئلتك حول البرنامج.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ STEPS ═══════════════════════════════════════════ -->
+<section class="section steps-section">
+  <div class="section-inner">
+    <h2 class="section-title fade-up">ماذا يحدث الآن؟</h2>
+    <p class="section-sub fade-up delay-1">
+      خطوة واحدة تفصلك عن بداية البرنامج:
+    </p>
+
+    <div class="steps-grid">
+
+      <!-- Our team contacts you -->
+      <div class="step-card fade-up delay-1">
+        <div class="step-icon">📞</div>
+        <h2 class="step-title">سيتواصل معك فريقنا</h2>
+        <span class="step-tag">الأماكن محدودة</span>
+        <p class="step-desc">
+          سيتصل بك أحد أفراد فريقنا لاستكمال تفاصيل التسجيل،
+          التأكد من ملاءمة البرنامج لمصلحتك، والإجابة على كل استفساراتك.
+          يُرجى الانتباه للمكالمة — المجموعة صغيرة والأماكن محدودة.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROGRAM FACTS ════════════════════════════════════ -->
+<section class="section facts-section">
+  <div class="section-inner">
+    <h2 class="section-title fade-up">تفاصيل البرنامج</h2>
+    <p class="section-sub fade-up delay-1">
+      الدفعة الثانية · مجموعة صغيرة وأماكن محدودة
+    </p>
+    <div class="facts-grid">
+      <div class="fact-card fade-up delay-1">
+        <div class="fact-icon">📚</div>
+        <div class="fact-num">12</div>
+        <div class="fact-label">لقاءً مكثفاً</div>
+      </div>
+      <div class="fact-card fade-up delay-2">
+        <div class="fact-icon">⏱️</div>
+        <div class="fact-num">3</div>
+        <div class="fact-label">ساعات لكل لقاء<br><bdi dir="ltr">10:00 – 13:00</bdi></div>
+      </div>
+      <div class="fact-card fade-up delay-3">
+        <div class="fact-icon">📅</div>
+        <div class="fact-num">الأربعاء</div>
+        <div class="fact-label">جدول أسبوعي ثابت</div>
+      </div>
+      <div class="fact-card fade-up delay-4">
+        <div class="fact-icon">🗓️</div>
+        <div class="fact-num"><bdi dir="ltr">23/09/26</bdi></div>
+        <div class="fact-label">موعد البداية</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PREPARE ══════════════════════════════════════════ -->
+<section class="section prepare-section">
+  <div class="section-inner">
+    <h2 class="section-title fade-up">كيف تستعدّ حتى ذلك الحين؟</h2>
+    <p class="section-sub fade-up delay-1">
+      في THE CHANGE لن تحصل على محاضرات نظرية، بل على نظام عمل تطبّقه من اللقاء الأول.<br>
+      حتى موعد البداية، ثلاثة أمور تستحق التحضير:
+    </p>
+    <div class="prepare-grid">
+      <div class="prepare-card fade-up delay-1">
+        <div class="prepare-icon">📊</div>
+        <h3>أرقام مصلحتك</h3>
+        <p>اجمع صورة أوّلية عن الإيرادات، المصاريف والتسعير — سنعمل عليها معاً.</p>
+      </div>
+      <div class="prepare-card fade-up delay-2">
+        <div class="prepare-icon">🧠</div>
+        <h3>عقل منفتح</h3>
+        <p>سنتحدّى الطريقة التي أدرت بها مصلحتك حتى اليوم.</p>
+      </div>
+      <div class="prepare-card fade-up delay-3">
+        <div class="prepare-icon">🎯</div>
+        <h3>هدف واضح</h3>
+        <p>فكّر بما تريد أن يتغيّر فعلياً في مصلحتك خلال الأشهر الثلاثة القادمة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPEAKER ══════════════════════════════════════════ -->
+<div class="speaker-section">
+  <div class="speaker-inner fade-up">
+    <div class="speaker-text">
+      <div class="speaker-eyebrow">من ستلتقي في البرنامج</div>
+      <h2 class="speaker-heading">نلتقي<br>قريباً 👋</h2>
+      <p class="speaker-name">
+        هبة حلبي<br>
+        مهندسة صناعة وإدارة · مرافِقة مصالح لمضاعفة الأرباح
+      </p>
+    </div>
+    <img class="speaker-photo"
+      src="https://content.vp4.me/info_wewin-consulting_com/Content/1313_733x733-r.png"
+      alt="هبة الحلبي">
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════ -->
+<footer>
+  <img class="footer-logo"
+    src="https://content.vp4.me/info_wewin-consulting_com/Content/logo-HIBA-convert_900x369-r.png"
+    alt="هبة الحلبي">
+  <p>© 2026 هبة الحلبي — جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+/* ── Confetti ── */
+(function () {
+  var colors = ['#f9226c','#9f21cf','#bb2eb6','#f1307b','#fce7f3','#e9d5ff','#fbbf24'];
+  var wrap = document.getElementById('confetti');
+  if (!wrap) return;
+  for (var i = 0; i < 100; i++) {
+    var el = document.createElement('div');
+    el.className = 'cp';
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.background = colors[Math.floor(Math.random() * colors.length)];
+    var size = (Math.random() * 8 + 5).toFixed(1) + 'px';
+    el.style.width = size;
+    el.style.height = size;
+    el.style.borderRadius = Math.random() > .5 ? '50%' : '3px';
+    var dur   = (Math.random() * 2.5 + 2).toFixed(2);
+    var delay = (Math.random() * 1.6).toFixed(2);
+    el.style.animation = 'fall ' + dur + 's ' + delay + 's linear forwards';
+    wrap.appendChild(el);
+  }
+  setTimeout(function(){ wrap.innerHTML = ''; }, 5500);
+})();
+</script>
+
+</body>
+</html>

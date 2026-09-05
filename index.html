@@ -809,6 +809,11 @@ footer a:hover { color: var(--white); }
             name="uf__c46acf62627647a093b816ab23997b18_mobile_475439"
             placeholder="رقم الهاتف" required>
         </div>
+        <div class="form-row-1">
+          <input class="field" type="text"
+            name="company_name"
+            placeholder="اسم الشركة" required>
+        </div>
         <div class="terms-line">
           <input type="checkbox"
             name="uf_confirmation_c46acf62627647a093b816ab23997b18"
@@ -1184,6 +1189,11 @@ footer a:hover { color: var(--white); }
             name="uf__c46acf62627647a093b816ab23997b18_mobile_475439"
             placeholder="رقم الهاتف" required>
         </div>
+        <div class="form-row-1">
+          <input class="field" type="text"
+            name="company_name"
+            placeholder="اسم الشركة" required>
+        </div>
         <div class="terms-line">
           <input type="checkbox"
             name="uf_confirmation_c46acf62627647a093b816ab23997b18"
@@ -1248,6 +1258,7 @@ footer a:hover { color: var(--white); }
         last_name:  fd.get('uf__c46acf62627647a093b816ab23997b18_last_name_475440'),
         email:      fd.get('uf__c46acf62627647a093b816ab23997b18_email_475438'),
         phone:      fd.get('uf__c46acf62627647a093b816ab23997b18_mobile_475439'),
+        company:    fd.get('company_name'),
         form_id:    id,
         source:     window.location.href
       };
@@ -1263,7 +1274,7 @@ footer a:hover { color: var(--white); }
       // Fire-and-forget to original action
       navigator.sendBeacon(form.action, fd);
 
-      window.location.href = 'thank-you.html';
+      window.location.href = 'thank-you-course.html';
     });
   });
 </script>
