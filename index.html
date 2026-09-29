@@ -605,7 +605,7 @@ footer a:hover { color: var(--white); }
 /* ─── VIDEO TESTIMONIALS ─────────────────────── */
 .vtest-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 360px));
+  grid-template-columns: repeat(3, minmax(0, 340px));
   gap: 28px;
   justify-content: center;
 }
@@ -638,6 +638,12 @@ footer a:hover { color: var(--white); }
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+.vtest-info .test-body { flex: 1; }
+.vtest-card { display: flex; flex-direction: column; }
+.vtest-info { flex: 1; }
+@media (max-width: 1060px) {
+  .vtest-grid { grid-template-columns: repeat(2, minmax(0, 340px)); }
 }
 @media (max-width: 700px) {
   .vtest-grid { grid-template-columns: minmax(0, 360px); }
@@ -1155,6 +1161,94 @@ footer a:hover { color: var(--white); }
             <div>
               <div class="test-name">سولومون أبو ريش</div>
               <div class="test-role">صاحب مصلحة — 10 سنوات خبرة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 — من التشتت للتنفيذ -->
+      <div class="vtest-card reveal d3">
+        <div class="vtest-video-wrap">
+          <iframe src="https://iframe.mediadelivery.net/embed/181041/e6f67b12-be53-44d5-be24-835e47786c09?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+            loading="lazy"
+            style="border:0;position:absolute;top:0;height:100%;width:100%;"
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+            allowfullscreen="true"></iframe>
+        </div>
+        <div class="vtest-info">
+          <div class="stars">★★★★★</div>
+          <p class="test-body">"اليوم مش بس عندي أفكار – عندي اتجاه، خدمات واضحة، وطريقة شغل أعرف من خلالها شو الخطوة اللي بعدها."</p>
+          <div class="test-footer">
+            <div class="test-avatar" style="background:linear-gradient(135deg,var(--purple),var(--pink));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:white;">✦</div>
+            <div>
+              <div class="test-name">صاحبة مصلحة</div>
+              <div class="test-role">من التشتت للتنفيذ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 4 — ١٠,٠٠٠ شيكل بيوم شغل -->
+      <div class="vtest-card reveal d4">
+        <div class="vtest-video-wrap">
+          <iframe src="https://iframe.mediadelivery.net/embed/181041/7fc695af-8fd6-4d9f-9f9d-4acd31a785c7?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+            loading="lazy"
+            style="border:0;position:absolute;top:0;height:100%;width:100%;"
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+            allowfullscreen="true"></iframe>
+        </div>
+        <div class="vtest-info">
+          <div class="stars">★★★★★</div>
+          <p class="test-body">"قدرت أعمل عشر آلاف شيكل بيوم شغل واحد، وكررت النتيجة. تعلمت أكون صاحبة المصلحة ومديرتها، مش العاملة فيها."</p>
+          <div class="test-footer">
+            <div class="test-avatar" style="background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:white;">✦</div>
+            <div>
+              <div class="test-name">صاحبة مصلحة</div>
+              <div class="test-role">مسار إعداد معالجين</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 5 — الخبرة لحالها ما بتكفي -->
+      <div class="vtest-card reveal d5">
+        <div class="vtest-video-wrap">
+          <iframe src="https://iframe.mediadelivery.net/embed/181041/51edbeb7-09ce-49e4-8571-eac2962da5d5?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+            loading="lazy"
+            style="border:0;position:absolute;top:0;height:100%;width:100%;"
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+            allowfullscreen="true"></iframe>
+        </div>
+        <div class="vtest-info">
+          <div class="stars">★★★★★</div>
+          <p class="test-body">"كل الخبرة ظلت معي، بس اللي تغيّر هو طريقة التفكير، الاتجاه، وكيف أستخدم هاي الخبرة حتى أبني صح."</p>
+          <div class="test-footer">
+            <div class="test-avatar" style="background:linear-gradient(135deg,var(--purple),var(--pink));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:white;">✦</div>
+            <div>
+              <div class="test-name">صاحب مشاريع</div>
+              <div class="test-role">نسيج، فساتين عرايس وسياحة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 6 — بطّلت أحرق معرفتي -->
+      <div class="vtest-card reveal d6">
+        <div class="vtest-video-wrap">
+          <iframe src="https://iframe.mediadelivery.net/embed/181041/3f99e5f5-dac1-4d7c-8ef3-d33ca1aeacab?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+            loading="lazy"
+            style="border:0;position:absolute;top:0;height:100%;width:100%;"
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+            allowfullscreen="true"></iframe>
+        </div>
+        <div class="vtest-info">
+          <div class="stars">★★★★★</div>
+          <p class="test-body">"بطّلت أحرق معرفتي بالمحتوى – صرت أعرف أحولها لقيمة، خدمة وربح."</p>
+          <div class="test-footer">
+            <div class="test-avatar" style="background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:white;">✦</div>
+            <div>
+              <div class="test-name">صاحبة مصلحة</div>
+              <div class="test-role">من المحتوى للربح</div>
             </div>
           </div>
         </div>
