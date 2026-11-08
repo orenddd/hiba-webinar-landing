@@ -423,6 +423,9 @@ section { padding: 96px 0; }
 .terms-line { display: flex; align-items: center; gap: 8px; margin: 6px 0 20px; font-size: 13px; color: var(--gray-500); }
 .terms-line input { width: 16px; height: 16px; accent-color: var(--purple); }
 .form-card .btn { width: 100%; }
+.field.is-invalid { border-color: var(--pink); background: rgba(249,34,108,.05); }
+.form-error { margin: -4px 0 14px; font-size: 14px; font-weight: 600; color: var(--pink); text-align: right; }
+.form-error[hidden] { display: none; }
 .form-trust { text-align: center; font-size: 13px; color: var(--gray-500); margin-top: 14px; }
 
 /* inline form (top) */
@@ -707,6 +710,7 @@ footer p { font-size: 13px; color: rgba(255,255,255,.45); }
             <input class="field" type="text"  name="company"   placeholder="اسم المصلحة / الشركة" required>
           </div>
           <label class="terms-line"><input type="checkbox" name="consent" value="yes" checked> أوافق على تلقّي معلومات حول البرنامج</label>
+          <p class="form-error" role="alert" hidden></p>
           <button type="submit" class="btn btn-primary btn-lg">أريد تفاصيل البرنامج</button>
         </form>
         <p class="form-trust">🔒 تفاصيلك محفوظة ولن تُنقل لأي جهة أخرى</p>
@@ -1028,6 +1032,7 @@ footer p { font-size: 13px; color: rgba(255,255,255,.45); }
           <input class="field" type="email" name="email"     placeholder="البريد الإلكتروني" required>
           <input class="field" type="text"  name="company"   placeholder="اسم المصلحة / الشركة" required>
           <label class="terms-line"><input type="checkbox" name="consent" value="yes" checked> أوافق على تلقّي معلومات حول البرنامج</label>
+          <p class="form-error" role="alert" hidden></p>
           <button type="submit" class="btn btn-primary btn-lg">أريد الانضمام للبرنامج</button>
         </form>
         <p class="form-trust">المجموعات صغيرة والأماكن محدودة</p>
@@ -1110,13 +1115,51 @@ footer p { font-size: 13px; color: rgba(255,255,255,.45); }
   // Form submit → send data in background, redirect immediately
   const WEBHOOK_URL = 'https://hook.eu2.make.com/nixhajuzlsmx7nzka5bs5kok94y5t8et';
 
+  // Phone check — same rules as the CRM (crm/supabase/functions/_shared/phone.ts)
+  function phoneError(raw) {
+    const value = (raw || '').trim();
+    if (!value) return 'الرجاء إدخال رقم الهاتف';
+    let digits = value.replace(/\D/g, '');
+    const intl = value.startsWith('+') || digits.startsWith('00');
+    const noExit = digits.startsWith('00') ? digits.slice(2) : digits;
+    if (intl && !noExit.startsWith('972')) {
+      return digits.length >= 8 && digits.length <= 15 ? null : 'رقم الهاتف غير صحيح';
+    }
+    if (noExit.startsWith('972')) {
+      digits = noExit.slice(3);
+      if (!digits.startsWith('0')) digits = '0' + digits;
+    }
+    if (!digits) return 'رقم الهاتف غير صحيح';
+    let len = null;
+    if (/^05\d/.test(digits) || /^07[2-9]/.test(digits) || /^1(700|800|599)/.test(digits)) len = 10;
+    else if (/^0[23489]/.test(digits)) len = 9;
+    if (len === null) return 'رقم الهاتف غير صحيح. مثال: \u2066050-1234567\u2069';
+    if (digits.length < len) return 'رقم الهاتف ناقص. مثال: \u2066050-1234567\u2069';
+    if (digits.length > len) return 'في رقم الهاتف أرقام زائدة. مثال: \u2066050-1234567\u2069';
+    return null;
+  }
+
   ['form1', 'form2'].forEach(id => {
     const form = document.getElementById(id);
     if (!form) return;
+    const errorBox = form.querySelector('.form-error');
+    const showError = (field, msg) => {
+      field.classList.add('is-invalid');
+      field.focus();
+      if (errorBox) { errorBox.textContent = msg; errorBox.hidden = false; }
+    };
+    form.querySelectorAll('.field').forEach(f => f.addEventListener('input', () => {
+      f.classList.remove('is-invalid');
+      if (errorBox && !form.querySelector('.is-invalid')) errorBox.hidden = true;
+    }));
+
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       const invalid = [...form.querySelectorAll('[required]')].find(f => !f.value.trim());
-      if (invalid) { invalid.focus(); invalid.style.borderColor = 'var(--pink)'; return; }
+      if (invalid) { showError(invalid, 'الرجاء تعبئة جميع الحقول'); return; }
+      const phoneField = form.querySelector('[name="phone"]');
+      const phoneProblem = phoneError(phoneField.value);
+      if (phoneProblem) { showError(phoneField, phoneProblem); return; }
 
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
